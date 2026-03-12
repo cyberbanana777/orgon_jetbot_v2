@@ -24,7 +24,7 @@ def generate_launch_description():
                 PathJoinSubstitution([
                     FindPackageShare('camera_driver'),  # замените на имя вашего пакета
                     'launch',
-                    'debug.launch.py'
+                    'realsense_debug.launch.py'
                 ])
             ),
             # Если аргументы не нужны, можно опустить launch_arguments

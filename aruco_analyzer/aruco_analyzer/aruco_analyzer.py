@@ -175,6 +175,14 @@ class ArucoDetectorNode(Node):
                 aruco_marker.pose.orientation = q
                 aruco_marker.marker_length = self.marker_size
                 aruco_marker.dictionary = self.dict_name
+                
+                marker_corners = corners[i][0]  # форма (4,2)
+                center_x = sum(c[0] for c in marker_corners) / 4.0
+                center_y = sum(c[1] for c in marker_corners) / 4.0
+
+                aruco_marker.center.x = float(center_x)
+                aruco_marker.center.y = float(center_y)
+                aruco_marker.center.z = 0.0 
 
                 aruco_markers_msg.markers.append(aruco_marker)
                 
