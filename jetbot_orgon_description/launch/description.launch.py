@@ -9,7 +9,6 @@ def generate_launch_description():
     pkg_share = get_package_share_directory('jetbot_orgon_description')
 
     xacro_file = os.path.join(pkg_share, 'urdf', 'jetbot.urdf.xacro')
-    rviz_config_file = os.path.join(pkg_share, 'rviz', 'jetbot.rviz')
 
     # Xacro → URDF
     robot_description = ParameterValue(
@@ -36,16 +35,8 @@ def generate_launch_description():
         output='screen'
     )
 
-    # RViz с конфигом
-    rviz_node = Node(
-        package='rviz2',
-        executable='rviz2',
-        arguments=['-d', rviz_config_file],
-        output='screen'
-    )
 
     return LaunchDescription([
         rsp_node,
         jsp_node,
-        rviz_node
     ])

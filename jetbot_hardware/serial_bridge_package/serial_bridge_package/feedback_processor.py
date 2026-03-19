@@ -58,7 +58,7 @@ class FeedbackProcessor(Node):
         
         # Parameters for coordinate frames
         self.declare_parameter('frame_id', 'odom')
-        self.declare_parameter('child_frame_id', 'base_footprint')
+        self.declare_parameter('child_frame_id', 'base_link')
 
         self.frame_id = self.get_parameter('frame_id').value
         self.child_frame_id = self.get_parameter('child_frame_id').value

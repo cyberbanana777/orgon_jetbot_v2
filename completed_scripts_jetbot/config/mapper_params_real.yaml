@@ -1,10 +1,10 @@
 slam_toolbox:
   ros__parameters:
 
-    use_sim_time: true
+    use_sim_time: false
 
     # Названия фреймов и топика лидара
-    scan_topic: /scan_filtered     # Топик с лазерными сканами
+    scan_topic: /scan #_filtered     # Топик с лазерными сканами
     odom_frame: odom               # Кадр одометрии (обычно "odom")
     map_frame: map                 # Глобальный фрейм карты
     base_frame: base_link          # Фрейм робота (лидара)
@@ -20,6 +20,7 @@ slam_toolbox:
     # Параметры построения карты
     resolution: 0.02               # Разрешение карты: размер клетки в метрах
     max_laser_range: 12.0           # Максимальное расстояние луча лидара (должно совпадать с датчиком)
+    min_laser_range: 0.1
     minimum_time_interval: 0.01    # Минимальное время между обработкой сканов
     transform_publish_period: 0.01 # Как часто публиковать transform map -> odom
 
