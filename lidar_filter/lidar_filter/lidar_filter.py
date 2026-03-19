@@ -30,8 +30,8 @@ class LaserSectorFilter(Node):
         super().__init__('laser_sector_filter')
         
         # Declare parameters: sector start and end in degrees
-        self.declare_parameter('start_angle_deg', -135.0)  # sector start in degrees
-        self.declare_parameter('end_angle_deg', 135.0)    # sector end in degrees
+        self.declare_parameter('start_angle_deg', -100.0)  # sector start in degrees
+        self.declare_parameter('end_angle_deg', 100.0)    # sector end in degrees
         self.declare_parameter('input_topic', '/scan')   # input topic
         self.declare_parameter('output_topic', '/scan_filtered')  # output topic
         self.declare_parameter('invert_sector', False)   # invert sector (keep everything except specified)

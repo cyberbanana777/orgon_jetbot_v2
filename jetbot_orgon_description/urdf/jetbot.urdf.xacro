@@ -8,8 +8,9 @@
     <material name="silver"> <color rgba="0.75 0.75 0.75 1"/> </material>
     <material name="grey"> <color rgba="0.5 0.5 0.5 1"/> </material>
 
+
     <!-- Odom link (корень без инерции и коллизии) -->
-    <link name="odom"/>
+    <!-- <link name="odom"/> -->
 
     <!-- Корпус джетбота (с инерцией и коллизией) -->
     <link name="base_link">
@@ -33,14 +34,14 @@
         </inertial>
     </link>
 
-    <joint name="base_link_joint" type="fixed">
+    <!-- <joint name="base_link_joint" type="fixed">
         <parent link="odom"/>
         <child link="base_link"/>
         <origin xyz="0 0 0" rpy="0 0 0"/>
-    </joint>
+    </joint> -->
 
     <!-- RP-Lidar (с коллизией и инерцией) -->
-    <link name="lidar">
+    <link name="lidar_link">
         <visual>
             <geometry>
                 <cylinder length="0.042" radius="0.038"/>
@@ -63,12 +64,12 @@
     
     <joint name="base_link_lidar_joint" type="fixed">
         <parent link="base_link"/>
-        <child link="lidar"/>
-        <origin xyz="0.11491 0 -0.0239" rpy="0 0 0"/>
+        <child link="lidar_link"/>
+        <origin xyz="0.11491 0 -0.0239" rpy="0 0 2.3562"/>
     </joint>
 
     <!-- Left wheel (с коллизией и инерцией) -->
-    <link name="left_wheel">
+    <link name="left_wheel_link">
         <visual>
             <geometry>
                 <cylinder length="0.0156" radius="0.033625"/>
@@ -91,13 +92,13 @@
     
     <joint name="base_link_left_wheel_joint" type="continuous">
         <parent link="base_link"/>
-        <child link="left_wheel"/>
+        <child link="left_wheel_link"/>
         <origin xyz="0.03004 0.08107 -0.00937" rpy="0 0 0"/>
         <axis xyz="0 1 0"/>
     </joint>
 
     <!-- Right wheel (с коллизией и инерцией) -->
-    <link name="right_wheel">
+    <link name="right_wheel_link">
         <visual>
             <geometry>
                 <cylinder length="0.0156" radius="0.033625"/>
@@ -120,13 +121,13 @@
     
     <joint name="base_link_right_wheel_joint" type="continuous">
         <parent link="base_link"/>
-        <child link="right_wheel"/>
+        <child link="right_wheel_link"/>
         <origin xyz="0.03004 -0.08107 -0.00937" rpy="0 0 0"/>
         <axis xyz="0 1 0"/>
     </joint>
 
     <!-- Платформа манипулятора -->
-    <link name="manipulator_platform">
+    <link name="manipulator_platform_link">
         <visual>
             <geometry>
                 <cylinder length="0.012" radius="0.04"/>
@@ -149,7 +150,7 @@
     
     <joint name="base_link_manipulator_platform_joint" type="fixed">
         <parent link="base_link"/>
-        <child link="manipulator_platform"/>
+        <child link="manipulator_platform_link"/>
         <origin xyz="0.07491 0 0.0239" rpy="0 0 0"/>
     </joint>
 
@@ -178,13 +179,13 @@
     </link>
 
     <joint name="manipulator_platform_manipulator_base_link_joint" type="fixed">
-        <parent link="manipulator_platform"/>
+        <parent link="manipulator_platform_link"/>
         <child link="manipulator_base_link"/>
         <origin xyz="0.04302 0.01263 0.02805" rpy="0 0 0"/>
     </joint>
 
     <!-- Шарнир на базе -->
-    <link name="base_joint_visual">
+    <link name="base_joint_visual_link">
         <visual>
             <geometry>
                 <cylinder length="0.025" radius="0.006"/>
@@ -196,7 +197,7 @@
     
     <joint name="manipulator_base_joint_visual_joint" type="fixed">
         <parent link="manipulator_base_link"/>
-        <child link="base_joint_visual"/>
+        <child link="base_joint_visual_link"/>
         <origin xyz="0.0101 -0.015 0.00655" rpy="0 0 0"/>
     </joint>
 
@@ -419,7 +420,7 @@
     <!-- =============================================================== Манипулятор =============================================================== -->
 
     <!-- Мозги (с инерцией и коллизией) -->
-    <link name="sandwich">
+    <link name="sandwich_link">
         <visual>
             <geometry>
                 <box size="0.103 0.154 0.097"/>
@@ -442,12 +443,12 @@
 
     <joint name="base_link_sandwich_joint" type="fixed">
         <parent link="base_link"/>
-        <child link="sandwich"/>
+        <child link="sandwich_link"/>
         <origin xyz="0.0075 -0.004 0.024" rpy="0 0 0"/>
     </joint>
 
     <!-- Левая антенна (с коллизией и инерцией) -->
-    <link name="left_antenn">
+    <link name="left_antenn_link">
         <visual>
             <geometry>
                 <cylinder length="0.194" radius="0.005"/>
@@ -470,12 +471,12 @@
     
     <joint name="base_link_left_antenn_joint" type="fixed">
         <parent link="base_link"/>
-        <child link="left_antenn"/>
+        <child link="left_antenn_link"/>
         <origin xyz="-0.075 0.045 0.024" rpy="0 0 0"/>
     </joint>
 
     <!-- Правая антенна (с коллизией и инерцией) -->
-    <link name="right_antenn">
+    <link name="right_antenn_link">
         <visual>
             <geometry>
                 <cylinder length="0.194" radius="0.005"/>
@@ -498,7 +499,7 @@
     
     <joint name="base_link_right_antenn_joint" type="fixed">
         <parent link="base_link"/>
-        <child link="right_antenn"/>
+        <child link="right_antenn_link"/>
         <origin xyz="-0.075 -0.045 0.024" rpy="0 0 0"/>
     </joint>
 

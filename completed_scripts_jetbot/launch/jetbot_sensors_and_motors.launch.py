@@ -27,9 +27,6 @@ def launch_setup(context, *args, **kwargs):
     enable_lidar_condition = PythonExpression([
         '"', LaunchConfiguration('enable_lidar'), '" == "True"'
     ])
-    enable_front_camera_condition = PythonExpression([
-        '"', LaunchConfiguration('enable_front_camera'), '" == "True"'
-    ])
     enable_motors_condition = PythonExpression([
         '"', LaunchConfiguration('enable_motors'), '" == "True"'
     ])
@@ -58,29 +55,10 @@ def launch_setup(context, *args, **kwargs):
     pkg3_launch_dir = os.path.join(
         get_package_share_directory('lidar_filter'),
         'launch'
-    )
-
-    config_dir = get_package_share_directory('completed_scripts_jetbot')
-    config_file = os.path.join(config_dir, 'config', 'realsense_config.yaml')
-    
-    realsense_pkg_share = get_package_share_directory('realsense2_camera')
-    realsense_launch_file = os.path.join(realsense_pkg_share, 'launch', 'rs_launch.py')
-    
-
-    # ========================================================================
-    # Change env - configuration for realsense
-    change_env = SetEnvironmentVariable(
-        name='REALSENSE_CONFIG_FILE',
-        value=config_file,
-        condition=IfCondition(enable_front_camera_condition),
-    )
+    )    
 
     # ========================================================================
     # Launches
-    front_camera_launch = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(realsense_launch_file),
-        condition=IfCondition(enable_front_camera_condition),
-    )
 
     serial_bridge_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(
@@ -110,21 +88,11 @@ def launch_setup(context, *args, **kwargs):
 
     # ========================================================================
     # System nodes 
-    transform_node =Node(
-        package='tf2_ros',
-        executable='static_transform_publisher',
-        name='static_transform_publisher',
-        arguments=['0', '0', '0', '0', '0', '0', '1', 'realsense_link', 'camera_link'],
-        condition=IfCondition(enable_front_camera_condition),
-    )
 
     return [
         serial_bridge_launch,
         sllidar_launch,
         lidar_filter_launch,
-        change_env,
-        front_camera_launch,
-        transform_node,
     ]
 
 
@@ -136,13 +104,6 @@ def generate_launch_description():
         'enable_lidar',
         default_value='True',
         description='Enable/Disable lidar',
-        choices=['True', 'False']
-    )
-
-    camera_mode_arg = DeclareLaunchArgument(
-        'enable_front_camera',
-        default_value='False',
-        description='Enable/Disable front camera (Intel Realsense d435i)',
         choices=['True', 'False']
     )
 
@@ -177,7 +138,6 @@ def generate_launch_description():
     
     return LaunchDescription([
         lidar_mode_arg,
-        camera_mode_arg,
         motors_mode_arg,
 
         lidar_serial_port_arg,
