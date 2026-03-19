@@ -25,7 +25,7 @@ class ScaraTeleopGUI(Node):
         self.grip_max = self.get_parameter('grip_max').value
         
         # Издатель целевой точки
-        self.pose_pub = self.create_publisher(Pose2D, '/target_pose', 10)
+        self.pose_pub = self.create_publisher(Pose2D, 'hand_of_god/target_pose', 10)
         
         # Текущие значения
         self.x_val = self.x_max

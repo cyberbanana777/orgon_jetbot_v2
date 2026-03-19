@@ -9,25 +9,27 @@ class ScaraIKPlanner(Node):
         super().__init__('scara_ik_planner')
         
         # Длины звеньев (м)
-        self.declare_parameter('a1', 0.15)
-        self.declare_parameter('a2', 0.10)
+        self.declare_parameter('a1', 0.054)
+        self.declare_parameter('a2', 0.100)
         # Конфигурация руки: +1 или -1
         self.declare_parameter('ARM', 1)
+        self.declare_parameter('prefix', 'hand_of_god')
         
         self.a1 = self.get_parameter('a1').value
         self.a2 = self.get_parameter('a2').value
         self.ARM = self.get_parameter('ARM').value
+        self.prefix = self.get_parameter('prefix').value
         
         # Подписчик на целевые координаты
-        self.sub = self.create_subscription(Pose2D, '/target_pose', self.pose_callback, 10)
+        self.sub = self.create_subscription(Pose2D, f'{self.prefix}/target_pose', self.pose_callback, 10)
         
         # Издатели углов и силы
-        self.angle1_pub = self.create_publisher(Float32, '/angle1', 10)
-        self.angle2_pub = self.create_publisher(Float32, '/angle2', 10)
-        self.angle3_pub = self.create_publisher(Float32, '/angle3', 10)  # сила схвата
+        self.angle1_pub = self.create_publisher(Float32, f'{self.prefix}/angle1', 10)
+        self.angle2_pub = self.create_publisher(Float32, f'{self.prefix}/angle2', 10)
+        self.angle3_pub = self.create_publisher(Float32, f'{self.prefix}/angle3', 10)  # сила схвата
         
         # Издатель строковой команды для ESP32 или другого драйвера
-        self.string_pub = self.create_publisher(String, '/scara_command_string', 10)
+        self.string_pub = self.create_publisher(String, '/low_level/serial/cmd', 10)
         
         self.get_logger().info(f'Scara IK Planner started: a1={self.a1}, a2={self.a2}, ARM={self.ARM}')
     
