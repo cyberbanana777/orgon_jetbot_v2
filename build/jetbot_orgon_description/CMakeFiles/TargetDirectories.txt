@@ -1,9 +1,0 @@
-/home/pavel/jetbot_orgon_ws/src/build/jetbot_orgon_description/CMakeFiles/uninstall.dir
-/home/pavel/jetbot_orgon_ws/src/build/jetbot_orgon_description/CMakeFiles/jetbot_orgon_description_uninstall.dir
-/home/pavel/jetbot_orgon_ws/src/build/jetbot_orgon_description/CMakeFiles/test.dir
-/home/pavel/jetbot_orgon_ws/src/build/jetbot_orgon_description/CMakeFiles/edit_cache.dir
-/home/pavel/jetbot_orgon_ws/src/build/jetbot_orgon_description/CMakeFiles/rebuild_cache.dir
-/home/pavel/jetbot_orgon_ws/src/build/jetbot_orgon_description/CMakeFiles/list_install_components.dir
-/home/pavel/jetbot_orgon_ws/src/build/jetbot_orgon_description/CMakeFiles/install.dir
-/home/pavel/jetbot_orgon_ws/src/build/jetbot_orgon_description/CMakeFiles/install/local.dir
-/home/pavel/jetbot_orgon_ws/src/build/jetbot_orgon_description/CMakeFiles/install/strip.dir

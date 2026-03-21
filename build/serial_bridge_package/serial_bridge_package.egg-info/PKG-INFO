@@ -1,8 +1,0 @@
-Metadata-Version: 2.1
-Name: serial-bridge-package
-Version: 1.0.0
-Summary: This package include node for provide data transfer from microcontroller to computer and back thought Serial port.
-Maintainer: banana-killer
-Maintainer-email: sashagrachev2005@gmail.com
-License: MIT
-License-File: LICENSE
