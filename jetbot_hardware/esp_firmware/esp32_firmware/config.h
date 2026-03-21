@@ -25,7 +25,7 @@ float KI_L = 0.0;
 float KD_L = 0.005;
 
 // Частота дискретизации для ПИДов
-float DT = 3;
+float DT = 5;
 
 //  Кнопка остановки
 const uint8_t PIN_EMERGENCY_STOP = 12;

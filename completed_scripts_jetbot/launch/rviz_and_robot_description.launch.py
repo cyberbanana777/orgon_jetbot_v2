@@ -19,7 +19,7 @@ from launch_ros.actions import Node
 def launch_setup(context, *args, **kwargs):
   
     pkg1_launch_dir = os.path.join(
-        get_package_share_directory('jetbot_mirea_description'),
+        get_package_share_directory('jetbot_orgon_description'),
         'launch'
     )
 
@@ -27,16 +27,9 @@ def launch_setup(context, *args, **kwargs):
 
     jetbos_mirea_description_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(
-            pkg1_launch_dir, 'real_robot.launch.py'
+            pkg1_launch_dir, 'description.launch.py'
             )
         ),
-    )
-
-    transform_node =Node(
-        package='tf2_ros',
-        executable='static_transform_publisher',
-        name='static_transform_publisher',
-        arguments=['0', '0', '0', '0', '0', '0', '1', 'realsense_link', 'camera_link']
     )
 
     rviz_node = Node(
@@ -50,7 +43,6 @@ def launch_setup(context, *args, **kwargs):
 
     return [
         jetbos_mirea_description_launch,
-        transform_node,
         rviz_node,
 
     ]

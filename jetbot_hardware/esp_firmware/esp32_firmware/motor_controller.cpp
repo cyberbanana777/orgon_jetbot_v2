@@ -20,7 +20,7 @@ MotorController::MotorController(float wheelBase, float maxWheelSpeed, float dt,
     , _rightChannel(rightChannel)
     , _invertLeft(invertLeft)
     , _invertRight(invertRight)
-    , _deathLine(0.4f)
+    , _deathLine(0.35f)
 
 {}
 
@@ -67,8 +67,8 @@ void MotorController::update(float currentLeftSpeed, float currentRightSpeed) {
     _pidL.input = currentLeftSpeed; // м/с
     _pidR.input = currentRightSpeed; // м/с
 
-    _outputLeft = _pidL.getResultNow();
-    _outputRight = _pidR.getResultNow();
+    _outputLeft = _pidL.getResultTimer();
+    _outputRight = _pidR.getResultTimer();
 
     _motorWrite(_leftChannel, _outputLeft);
     _motorWrite(_rightChannel, _outputRight);

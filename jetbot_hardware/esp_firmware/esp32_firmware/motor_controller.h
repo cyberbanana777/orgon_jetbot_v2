@@ -4,6 +4,8 @@
 
 #include <Arduino.h>
 #include <Adafruit_PWMServoDriver.h>
+#define PID_INTEGRAL_WINDOW 40
+#define PID_OPTIMIZED_I
 #include <GyverPID.h>
 
 class MotorController {

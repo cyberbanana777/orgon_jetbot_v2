@@ -18,18 +18,6 @@ def generate_launch_description():
             ])
         ),
 
-        # Второй включаемый launch-файл (из текущего пакета, например)
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(
-                PathJoinSubstitution([
-                    FindPackageShare('camera_driver'),  # замените на имя вашего пакета
-                    'launch',
-                    'realsense_debug.launch.py'
-                ])
-            ),
-            # Если аргументы не нужны, можно опустить launch_arguments
-        ),
-
         ExecuteProcess(
             cmd=[
                 'rqt',
