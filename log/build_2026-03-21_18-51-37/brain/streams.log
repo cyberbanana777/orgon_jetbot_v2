@@ -1,0 +1,31 @@
+[2.057s] Invoking command in '/home/pavel/jetbot_orgon_ws/src/brain': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/pavel/jetbot_orgon_ws/src/build/brain/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pavel/jetbot_orgon_ws/src/install/brain/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/brain build --build-base /home/pavel/jetbot_orgon_ws/src/build/brain/build install --record /home/pavel/jetbot_orgon_ws/src/build/brain/install.log --single-version-externally-managed install_data
+[2.299s] running egg_info
+[2.316s] writing ../build/brain/brain.egg-info/PKG-INFO
+[2.316s] writing dependency_links to ../build/brain/brain.egg-info/dependency_links.txt
+[2.317s] writing entry points to ../build/brain/brain.egg-info/entry_points.txt
+[2.317s] writing requirements to ../build/brain/brain.egg-info/requires.txt
+[2.317s] writing top-level names to ../build/brain/brain.egg-info/top_level.txt
+[2.354s] reading manifest file '../build/brain/brain.egg-info/SOURCES.txt'
+[2.355s] writing manifest file '../build/brain/brain.egg-info/SOURCES.txt'
+[2.355s] running build
+[2.355s] running build_py
+[2.355s] copying brain/brain_node.py -> /home/pavel/jetbot_orgon_ws/src/build/brain/build/lib/brain
+[2.355s] running install
+[2.361s] running install_lib
+[2.380s] copying /home/pavel/jetbot_orgon_ws/src/build/brain/build/lib/brain/brain_node.py -> /home/pavel/jetbot_orgon_ws/src/install/brain/lib/python3.12/site-packages/brain
+[2.381s] byte-compiling /home/pavel/jetbot_orgon_ws/src/install/brain/lib/python3.12/site-packages/brain/brain_node.py to brain_node.cpython-312.pyc
+[2.381s] /home/pavel/jetbot_orgon_ws/src/install/brain/lib/python3.12/site-packages/brain/brain_node.py:37: SyntaxWarning: invalid escape sequence '\h'
+[2.382s]   '\hand_of_god/target_pose', # топик принимающий IK
+[2.382s]   File "/home/pavel/jetbot_orgon_ws/src/install/brain/lib/python3.12/site-packages/brain/brain_node.py", line 58
+[2.382s]     def pose_publisher(self,)
+[2.382s]                              ^
+[2.382s] SyntaxError: expected ':'
+[2.382s] 
+[2.382s] running install_data
+[2.382s] running install_egg_info
+[2.402s] removing '/home/pavel/jetbot_orgon_ws/src/install/brain/lib/python3.12/site-packages/brain-0.0.0-py3.12.egg-info' (and everything under it)
+[2.403s] Copying ../build/brain/brain.egg-info to /home/pavel/jetbot_orgon_ws/src/install/brain/lib/python3.12/site-packages/brain-0.0.0-py3.12.egg-info
+[2.403s] running install_scripts
+[2.531s] Installing brain script to /home/pavel/jetbot_orgon_ws/src/install/brain/lib/brain
+[2.532s] writing list of installed files to '/home/pavel/jetbot_orgon_ws/src/build/brain/install.log'
+[2.575s] Invoked command in '/home/pavel/jetbot_orgon_ws/src/brain' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/pavel/jetbot_orgon_ws/src/build/brain/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pavel/jetbot_orgon_ws/src/install/brain/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/brain build --build-base /home/pavel/jetbot_orgon_ws/src/build/brain/build install --record /home/pavel/jetbot_orgon_ws/src/build/brain/install.log --single-version-externally-managed install_data

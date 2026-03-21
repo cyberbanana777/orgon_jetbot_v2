@@ -1,0 +1,7 @@
+/home/pavel/jetbot_orgon_ws/src/install/brain/lib/python3.12/site-packages/brain/brain_node.py:37: SyntaxWarning: invalid escape sequence '\h'
+  '\hand_of_god/target_pose', # топик принимающий IK
+  File "/home/pavel/jetbot_orgon_ws/src/install/brain/lib/python3.12/site-packages/brain/brain_node.py", line 58
+    def pose_publisher(self,)
+                             ^
+SyntaxError: expected ':'
+
