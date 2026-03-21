@@ -1,9 +1,0 @@
-Metadata-Version: 2.1
-Name: aruco-analyzer
-Version: 0.0.1
-Summary: The pkg include node for determine ArUco markers on camera images flow.
-Maintainer: banana-killer
-Maintainer-email: sashagrachev2005@gmail.com
-License: MIT
-Provides-Extra: test
-License-File: LICENSE
