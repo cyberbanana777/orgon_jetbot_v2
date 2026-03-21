@@ -7,20 +7,35 @@ from std_msgs.msg import String
 from geometry_msgs.msg import PoseWithCovarianceStamped
 from nav2_msgs.action import NavigateToPose
 from geometry_msgs.msg import PoseStamped
+from geometry_msgs.msg import Pose2D
 import math
 import sys
 
 class Brain(Node):
     def __init__(self):
+        super().__init__('Brain')  # Имя узла в ROS2
 
-        # Переменные для хранения текущего состояния
+        # Переменные для хранения текущего состояния навигации
         self.current_goal_sent = False
         self.current_pose = None
 
-        super().__init__('Brain')  # Имя узла в ROS2
+        # Переменные для хранения текущего состояния манипулятора
+        self.x_manipulator = 0
+        self.y_manipulator = 0
+        self.is_grabbed = False
 
         # Создаем Action Client для /navigate_to_pose
-        self._action_client = ActionClient(self, NavigateToPose, 'navigate_to_pose')
+        self._action_client = ActionClient(
+            self,
+            NavigateToPose,
+            'navigate_to_pose'
+        )
+
+        # Параметры: тип сообщения, имя топика, размер очереди
+        self.pose_publisher = self.create_publisher(
+            Pose2D,
+            '\hand_of_god/target_pose', # топик принимающий IK
+            10)
         
         # Подписка на координаты робота
         self.pose_subscription = self.create_subscription(
@@ -40,6 +55,8 @@ class Brain(Node):
         
         self.get_logger().info('Brain node initialized')
     
+    def pose_publisher(self,)
+
     def send_goal(self, x, y, yaw_radians):
         # Проверяем, не отправлена ли уже цель
         if self.current_goal_sent:
@@ -127,7 +144,9 @@ def main(args=None):
     rclpy.init(args=args)
     node = Brain()
     
-    # Логика поведения робота
+    # Логика навигации робота
+
+    # Логика поведения манипулятора
     
     try:
         rclpy.spin(node)
