@@ -1,0 +1,22 @@
+[2.005s] Invoking command in '/home/pavel/jetbot_orgon_ws/src/manipulator_control': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/pavel/jetbot_orgon_ws/src/build/manipulator_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pavel/jetbot_orgon_ws/src/install/manipulator_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/manipulator_control build --build-base /home/pavel/jetbot_orgon_ws/src/build/manipulator_control/build install --record /home/pavel/jetbot_orgon_ws/src/build/manipulator_control/install.log --single-version-externally-managed install_data
+[2.359s] running egg_info
+[2.384s] writing ../build/manipulator_control/manipulator_control.egg-info/PKG-INFO
+[2.385s] writing dependency_links to ../build/manipulator_control/manipulator_control.egg-info/dependency_links.txt
+[2.385s] writing entry points to ../build/manipulator_control/manipulator_control.egg-info/entry_points.txt
+[2.385s] writing requirements to ../build/manipulator_control/manipulator_control.egg-info/requires.txt
+[2.385s] writing top-level names to ../build/manipulator_control/manipulator_control.egg-info/top_level.txt
+[2.455s] reading manifest file '../build/manipulator_control/manipulator_control.egg-info/SOURCES.txt'
+[2.455s] writing manifest file '../build/manipulator_control/manipulator_control.egg-info/SOURCES.txt'
+[2.455s] running build
+[2.455s] running build_py
+[2.455s] running install
+[2.455s] running install_lib
+[2.479s] running install_data
+[2.480s] running install_egg_info
+[2.508s] removing '/home/pavel/jetbot_orgon_ws/src/install/manipulator_control/lib/python3.12/site-packages/manipulator_control-0.0.0-py3.12.egg-info' (and everything under it)
+[2.509s] Copying ../build/manipulator_control/manipulator_control.egg-info to /home/pavel/jetbot_orgon_ws/src/install/manipulator_control/lib/python3.12/site-packages/manipulator_control-0.0.0-py3.12.egg-info
+[2.510s] running install_scripts
+[2.632s] Installing scara_ik_planner script to /home/pavel/jetbot_orgon_ws/src/install/manipulator_control/lib/manipulator_control
+[2.632s] Installing scara_teleop_gui script to /home/pavel/jetbot_orgon_ws/src/install/manipulator_control/lib/manipulator_control
+[2.632s] writing list of installed files to '/home/pavel/jetbot_orgon_ws/src/build/manipulator_control/install.log'
+[2.733s] Invoked command in '/home/pavel/jetbot_orgon_ws/src/manipulator_control' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/pavel/jetbot_orgon_ws/src/build/manipulator_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pavel/jetbot_orgon_ws/src/install/manipulator_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/manipulator_control build --build-base /home/pavel/jetbot_orgon_ws/src/build/manipulator_control/build install --record /home/pavel/jetbot_orgon_ws/src/build/manipulator_control/install.log --single-version-externally-managed install_data

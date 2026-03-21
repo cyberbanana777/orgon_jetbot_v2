@@ -24,6 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'brain = brain_node.brain_node:main',
         ],
     },
 )

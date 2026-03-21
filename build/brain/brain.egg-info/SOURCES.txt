@@ -4,6 +4,7 @@ setup.py
 ../build/brain/brain.egg-info/PKG-INFO
 ../build/brain/brain.egg-info/SOURCES.txt
 ../build/brain/brain.egg-info/dependency_links.txt
+../build/brain/brain.egg-info/entry_points.txt
 ../build/brain/brain.egg-info/requires.txt
 ../build/brain/brain.egg-info/top_level.txt
 ../build/brain/brain.egg-info/zip-safe

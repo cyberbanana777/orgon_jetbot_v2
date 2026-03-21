@@ -1,0 +1,20 @@
+[1.987s] Invoking command in '/home/pavel/jetbot_orgon_ws/src/aruco/aruco_bringup': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/pavel/jetbot_orgon_ws/src/build/aruco_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pavel/jetbot_orgon_ws/src/install/aruco_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/aruco_bringup build --build-base /home/pavel/jetbot_orgon_ws/src/build/aruco_bringup/build install --record /home/pavel/jetbot_orgon_ws/src/build/aruco_bringup/install.log --single-version-externally-managed install_data
+[2.229s] running egg_info
+[2.246s] writing ../../build/aruco_bringup/aruco_bringup.egg-info/PKG-INFO
+[2.246s] writing dependency_links to ../../build/aruco_bringup/aruco_bringup.egg-info/dependency_links.txt
+[2.246s] writing requirements to ../../build/aruco_bringup/aruco_bringup.egg-info/requires.txt
+[2.246s] writing top-level names to ../../build/aruco_bringup/aruco_bringup.egg-info/top_level.txt
+[2.280s] reading manifest file '../../build/aruco_bringup/aruco_bringup.egg-info/SOURCES.txt'
+[2.281s] adding license file 'LICENSE'
+[2.281s] writing manifest file '../../build/aruco_bringup/aruco_bringup.egg-info/SOURCES.txt'
+[2.281s] running build
+[2.281s] running build_py
+[2.281s] running install
+[2.287s] running install_lib
+[2.304s] running install_data
+[2.305s] running install_egg_info
+[2.323s] removing '/home/pavel/jetbot_orgon_ws/src/install/aruco_bringup/lib/python3.12/site-packages/aruco_bringup-0.0.0-py3.12.egg-info' (and everything under it)
+[2.323s] Copying ../../build/aruco_bringup/aruco_bringup.egg-info to /home/pavel/jetbot_orgon_ws/src/install/aruco_bringup/lib/python3.12/site-packages/aruco_bringup-0.0.0-py3.12.egg-info
+[2.324s] running install_scripts
+[2.445s] writing list of installed files to '/home/pavel/jetbot_orgon_ws/src/build/aruco_bringup/install.log'
+[2.493s] Invoked command in '/home/pavel/jetbot_orgon_ws/src/aruco/aruco_bringup' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/pavel/jetbot_orgon_ws/src/build/aruco_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pavel/jetbot_orgon_ws/src/install/aruco_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/aruco_bringup build --build-base /home/pavel/jetbot_orgon_ws/src/build/aruco_bringup/build install --record /home/pavel/jetbot_orgon_ws/src/build/aruco_bringup/install.log --single-version-externally-managed install_data
