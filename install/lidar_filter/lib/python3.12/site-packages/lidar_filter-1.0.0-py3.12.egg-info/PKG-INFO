@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: lidar-filter
+Version: 1.0.0
+Summary: Simple lidar data filter type of topic "/scan" (sensor_msgs/msg/LaserScan)
+Maintainer: banana-killer
+Maintainer-email: sashagrachev2005@gmail.com
+License: MIT
+Provides-Extra: test
+License-File: LICENSE

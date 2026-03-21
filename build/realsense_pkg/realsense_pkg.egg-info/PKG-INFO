@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: realsense-pkg
+Version: 0.0.0
+Summary: The pkg includes config files for start camera Intel Realsense D435i
+Maintainer: banana-killer
+Maintainer-email: sashagrachev2005@gmail.com
+License: MIT
+Provides-Extra: test
+License-File: LICENSE

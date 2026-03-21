@@ -1,0 +1,44 @@
+[0.656s] Invoking command in '/home/pavel/jetbot_orgon_ws/src/aruco/aruco_analyzer': AMENT_PREFIX_PATH=/home/pavel/jetbot_orgon_ws/src/install/aruco_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pavel/jetbot_orgon_ws/src/install/aruco_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/pavel/jetbot_orgon_ws/src/install/aruco_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pavel/jetbot_orgon_ws/src/build/aruco_analyzer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pavel/jetbot_orgon_ws/src/install/aruco_analyzer/lib/python3.12/site-packages:/home/pavel/jetbot_orgon_ws/src/install/aruco_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/aruco_analyzer build --build-base /home/pavel/jetbot_orgon_ws/src/build/aruco_analyzer/build install --record /home/pavel/jetbot_orgon_ws/src/build/aruco_analyzer/install.log --single-version-externally-managed install_data
+[0.864s] running egg_info
+[0.864s] creating ../../build/aruco_analyzer/aruco_analyzer.egg-info
+[0.879s] writing ../../build/aruco_analyzer/aruco_analyzer.egg-info/PKG-INFO
+[0.879s] writing dependency_links to ../../build/aruco_analyzer/aruco_analyzer.egg-info/dependency_links.txt
+[0.879s] writing entry points to ../../build/aruco_analyzer/aruco_analyzer.egg-info/entry_points.txt
+[0.879s] writing requirements to ../../build/aruco_analyzer/aruco_analyzer.egg-info/requires.txt
+[0.879s] writing top-level names to ../../build/aruco_analyzer/aruco_analyzer.egg-info/top_level.txt
+[0.880s] writing manifest file '../../build/aruco_analyzer/aruco_analyzer.egg-info/SOURCES.txt'
+[0.911s] reading manifest file '../../build/aruco_analyzer/aruco_analyzer.egg-info/SOURCES.txt'
+[0.911s] adding license file 'LICENSE'
+[0.911s] writing manifest file '../../build/aruco_analyzer/aruco_analyzer.egg-info/SOURCES.txt'
+[0.911s] running build
+[0.911s] running build_py
+[0.912s] creating /home/pavel/jetbot_orgon_ws/src/build/aruco_analyzer/build
+[0.912s] creating /home/pavel/jetbot_orgon_ws/src/build/aruco_analyzer/build/lib
+[0.912s] creating /home/pavel/jetbot_orgon_ws/src/build/aruco_analyzer/build/lib/aruco_analyzer
+[0.912s] copying aruco_analyzer/aruco_analyzer.py -> /home/pavel/jetbot_orgon_ws/src/build/aruco_analyzer/build/lib/aruco_analyzer
+[0.912s] copying aruco_analyzer/__init__.py -> /home/pavel/jetbot_orgon_ws/src/build/aruco_analyzer/build/lib/aruco_analyzer
+[0.912s] running install
+[0.917s] running install_lib
+[0.932s] creating /home/pavel/jetbot_orgon_ws/src/install/aruco_analyzer/lib/python3.12/site-packages/aruco_analyzer
+[0.933s] copying /home/pavel/jetbot_orgon_ws/src/build/aruco_analyzer/build/lib/aruco_analyzer/aruco_analyzer.py -> /home/pavel/jetbot_orgon_ws/src/install/aruco_analyzer/lib/python3.12/site-packages/aruco_analyzer
+[0.933s] copying /home/pavel/jetbot_orgon_ws/src/build/aruco_analyzer/build/lib/aruco_analyzer/__init__.py -> /home/pavel/jetbot_orgon_ws/src/install/aruco_analyzer/lib/python3.12/site-packages/aruco_analyzer
+[0.933s] byte-compiling /home/pavel/jetbot_orgon_ws/src/install/aruco_analyzer/lib/python3.12/site-packages/aruco_analyzer/aruco_analyzer.py to aruco_analyzer.cpython-312.pyc
+[0.935s] byte-compiling /home/pavel/jetbot_orgon_ws/src/install/aruco_analyzer/lib/python3.12/site-packages/aruco_analyzer/__init__.py to __init__.cpython-312.pyc
+[0.936s] running install_data
+[0.936s] creating /home/pavel/jetbot_orgon_ws/src/install/aruco_analyzer/share/ament_index
+[0.936s] creating /home/pavel/jetbot_orgon_ws/src/install/aruco_analyzer/share/ament_index/resource_index
+[0.936s] creating /home/pavel/jetbot_orgon_ws/src/install/aruco_analyzer/share/ament_index/resource_index/packages
+[0.936s] copying resource/aruco_analyzer -> /home/pavel/jetbot_orgon_ws/src/install/aruco_analyzer/share/ament_index/resource_index/packages
+[0.936s] copying package.xml -> /home/pavel/jetbot_orgon_ws/src/install/aruco_analyzer/share/aruco_analyzer
+[0.936s] creating /home/pavel/jetbot_orgon_ws/src/install/aruco_analyzer/share/aruco_analyzer/launch
+[0.936s] copying launch/release.launch.py -> /home/pavel/jetbot_orgon_ws/src/install/aruco_analyzer/share/aruco_analyzer/launch
+[0.936s] copying launch/debug.launch.py -> /home/pavel/jetbot_orgon_ws/src/install/aruco_analyzer/share/aruco_analyzer/launch
+[0.936s] creating /home/pavel/jetbot_orgon_ws/src/install/aruco_analyzer/share/aruco_analyzer/config
+[0.936s] copying config/debug_params.yaml -> /home/pavel/jetbot_orgon_ws/src/install/aruco_analyzer/share/aruco_analyzer/config
+[0.937s] copying config/release_params.yaml -> /home/pavel/jetbot_orgon_ws/src/install/aruco_analyzer/share/aruco_analyzer/config
+[0.937s] running install_egg_info
+[0.953s] Copying ../../build/aruco_analyzer/aruco_analyzer.egg-info to /home/pavel/jetbot_orgon_ws/src/install/aruco_analyzer/lib/python3.12/site-packages/aruco_analyzer-0.0.1-py3.12.egg-info
+[0.954s] running install_scripts
+[1.061s] Installing aruco_analyzer script to /home/pavel/jetbot_orgon_ws/src/install/aruco_analyzer/lib/aruco_analyzer
+[1.061s] writing list of installed files to '/home/pavel/jetbot_orgon_ws/src/build/aruco_analyzer/install.log'
+[1.089s] Invoked command in '/home/pavel/jetbot_orgon_ws/src/aruco/aruco_analyzer' returned '0': AMENT_PREFIX_PATH=/home/pavel/jetbot_orgon_ws/src/install/aruco_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pavel/jetbot_orgon_ws/src/install/aruco_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/pavel/jetbot_orgon_ws/src/install/aruco_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pavel/jetbot_orgon_ws/src/build/aruco_analyzer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pavel/jetbot_orgon_ws/src/install/aruco_analyzer/lib/python3.12/site-packages:/home/pavel/jetbot_orgon_ws/src/install/aruco_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/aruco_analyzer build --build-base /home/pavel/jetbot_orgon_ws/src/build/aruco_analyzer/build install --record /home/pavel/jetbot_orgon_ws/src/build/aruco_analyzer/install.log --single-version-externally-managed install_data

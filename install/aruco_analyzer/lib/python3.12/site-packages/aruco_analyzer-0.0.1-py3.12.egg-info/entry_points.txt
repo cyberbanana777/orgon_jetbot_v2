@@ -1,0 +1,2 @@
+[console_scripts]
+aruco_analyzer = aruco_analyzer.aruco_analyzer:main

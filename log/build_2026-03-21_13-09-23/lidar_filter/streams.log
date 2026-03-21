@@ -1,0 +1,40 @@
+[1.654s] Invoking command in '/home/pavel/jetbot_orgon_ws/src/jetbot_hardware/lidar_filter': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/pavel/jetbot_orgon_ws/src/build/lidar_filter/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pavel/jetbot_orgon_ws/src/install/lidar_filter/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lidar_filter build --build-base /home/pavel/jetbot_orgon_ws/src/build/lidar_filter/build install --record /home/pavel/jetbot_orgon_ws/src/build/lidar_filter/install.log --single-version-externally-managed install_data
+[1.990s] running egg_info
+[1.990s] creating ../../build/lidar_filter/lidar_filter.egg-info
+[2.015s] writing ../../build/lidar_filter/lidar_filter.egg-info/PKG-INFO
+[2.016s] writing dependency_links to ../../build/lidar_filter/lidar_filter.egg-info/dependency_links.txt
+[2.018s] writing entry points to ../../build/lidar_filter/lidar_filter.egg-info/entry_points.txt
+[2.018s] writing requirements to ../../build/lidar_filter/lidar_filter.egg-info/requires.txt
+[2.018s] writing top-level names to ../../build/lidar_filter/lidar_filter.egg-info/top_level.txt
+[2.018s] writing manifest file '../../build/lidar_filter/lidar_filter.egg-info/SOURCES.txt'
+[2.070s] reading manifest file '../../build/lidar_filter/lidar_filter.egg-info/SOURCES.txt'
+[2.070s] adding license file 'LICENSE'
+[2.071s] writing manifest file '../../build/lidar_filter/lidar_filter.egg-info/SOURCES.txt'
+[2.071s] running build
+[2.071s] running build_py
+[2.071s] creating /home/pavel/jetbot_orgon_ws/src/build/lidar_filter/build
+[2.071s] creating /home/pavel/jetbot_orgon_ws/src/build/lidar_filter/build/lib
+[2.071s] creating /home/pavel/jetbot_orgon_ws/src/build/lidar_filter/build/lib/lidar_filter
+[2.072s] copying lidar_filter/__init__.py -> /home/pavel/jetbot_orgon_ws/src/build/lidar_filter/build/lib/lidar_filter
+[2.072s] copying lidar_filter/lidar_filter.py -> /home/pavel/jetbot_orgon_ws/src/build/lidar_filter/build/lib/lidar_filter
+[2.072s] running install
+[2.081s] running install_lib
+[2.113s] creating /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/lib/python3.12/site-packages/lidar_filter
+[2.113s] copying /home/pavel/jetbot_orgon_ws/src/build/lidar_filter/build/lib/lidar_filter/__init__.py -> /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/lib/python3.12/site-packages/lidar_filter
+[2.113s] copying /home/pavel/jetbot_orgon_ws/src/build/lidar_filter/build/lib/lidar_filter/lidar_filter.py -> /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/lib/python3.12/site-packages/lidar_filter
+[2.113s] byte-compiling /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/lib/python3.12/site-packages/lidar_filter/__init__.py to __init__.cpython-312.pyc
+[2.113s] byte-compiling /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/lib/python3.12/site-packages/lidar_filter/lidar_filter.py to lidar_filter.cpython-312.pyc
+[2.114s] running install_data
+[2.115s] creating /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/share/ament_index
+[2.115s] creating /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/share/ament_index/resource_index
+[2.115s] creating /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/share/ament_index/resource_index/packages
+[2.115s] copying resource/lidar_filter -> /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/share/ament_index/resource_index/packages
+[2.115s] copying package.xml -> /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/share/lidar_filter
+[2.115s] creating /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/share/lidar_filter/launch
+[2.118s] copying launch/filter.launch.py -> /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/share/lidar_filter/launch
+[2.118s] running install_egg_info
+[2.145s] Copying ../../build/lidar_filter/lidar_filter.egg-info to /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/lib/python3.12/site-packages/lidar_filter-1.0.0-py3.12.egg-info
+[2.145s] running install_scripts
+[2.346s] Installing lidar_filter script to /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/lib/lidar_filter
+[2.347s] writing list of installed files to '/home/pavel/jetbot_orgon_ws/src/build/lidar_filter/install.log'
+[2.417s] Invoked command in '/home/pavel/jetbot_orgon_ws/src/jetbot_hardware/lidar_filter' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/pavel/jetbot_orgon_ws/src/build/lidar_filter/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pavel/jetbot_orgon_ws/src/install/lidar_filter/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lidar_filter build --build-base /home/pavel/jetbot_orgon_ws/src/build/lidar_filter/build install --record /home/pavel/jetbot_orgon_ws/src/build/lidar_filter/install.log --single-version-externally-managed install_data

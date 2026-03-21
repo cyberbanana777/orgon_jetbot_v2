@@ -40,7 +40,7 @@
     </joint> -->
 
     <!-- RP-Lidar (с коллизией и инерцией) -->
-    <link name="lidar">
+    <link name="lidar_link">
         <visual>
             <geometry>
                 <cylinder length="0.042" radius="0.038"/>
@@ -63,7 +63,7 @@
     
     <joint name="base_link_lidar_joint" type="fixed">
         <parent link="base_link"/>
-        <child link="lidar"/>
+        <child link="lidar_link"/>
         <origin xyz="0.11491 0 -0.0239" rpy="0 0 2.3562"/>
     </joint>
 

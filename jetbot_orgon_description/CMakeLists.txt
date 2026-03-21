@@ -28,4 +28,9 @@ install(
   DESTINATION share/${PROJECT_NAME}
 )
 
+install(PROGRAMS
+  src/joint_state_bridge.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 ament_package()

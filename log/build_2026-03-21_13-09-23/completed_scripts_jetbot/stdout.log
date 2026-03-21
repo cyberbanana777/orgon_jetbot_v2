@@ -1,0 +1,49 @@
+running egg_info
+creating ../build/completed_scripts_jetbot/completed_scripts_jetbot.egg-info
+writing ../build/completed_scripts_jetbot/completed_scripts_jetbot.egg-info/PKG-INFO
+writing dependency_links to ../build/completed_scripts_jetbot/completed_scripts_jetbot.egg-info/dependency_links.txt
+writing requirements to ../build/completed_scripts_jetbot/completed_scripts_jetbot.egg-info/requires.txt
+writing top-level names to ../build/completed_scripts_jetbot/completed_scripts_jetbot.egg-info/top_level.txt
+writing manifest file '../build/completed_scripts_jetbot/completed_scripts_jetbot.egg-info/SOURCES.txt'
+reading manifest file '../build/completed_scripts_jetbot/completed_scripts_jetbot.egg-info/SOURCES.txt'
+writing manifest file '../build/completed_scripts_jetbot/completed_scripts_jetbot.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/pavel/jetbot_orgon_ws/src/build/completed_scripts_jetbot/build
+creating /home/pavel/jetbot_orgon_ws/src/build/completed_scripts_jetbot/build/lib
+creating /home/pavel/jetbot_orgon_ws/src/build/completed_scripts_jetbot/build/lib/completed_scripts_jetbot
+copying completed_scripts_jetbot/__init__.py -> /home/pavel/jetbot_orgon_ws/src/build/completed_scripts_jetbot/build/lib/completed_scripts_jetbot
+running install
+running install_lib
+creating /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/lib/python3.12/site-packages/completed_scripts_jetbot
+copying /home/pavel/jetbot_orgon_ws/src/build/completed_scripts_jetbot/build/lib/completed_scripts_jetbot/__init__.py -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/lib/python3.12/site-packages/completed_scripts_jetbot
+byte-compiling /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/lib/python3.12/site-packages/completed_scripts_jetbot/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/ament_index
+creating /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/ament_index/resource_index
+creating /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/ament_index/resource_index/packages
+copying resource/completed_scripts_jetbot -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/ament_index/resource_index/packages
+copying package.xml -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot
+creating /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/launch
+copying launch/jetbot_sensors_and_motors.launch.py -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/launch
+copying launch/rviz_and_robot_description.launch.py -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/launch
+copying launch/navigation.launch.py -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/launch
+copying launch/load_map.launch.py -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/launch
+copying launch/mapping.launch.py -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/launch
+copying launch/teleop.launch.py -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/launch
+creating /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/config
+copying config/navigation_param_real.yaml -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/config
+copying config/mapper_params_real.yaml -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/config
+copying config/amcl_params_real.yaml -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/config
+copying config/teleop_params.yaml -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/config
+creating /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/rviz
+copying rviz/full.rviz -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/rviz
+creating /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/maps
+copying maps/map.yaml -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/maps
+copying maps/map.pgm -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/maps
+copying maps/G210_with_boxes_map.yaml -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/maps
+copying maps/G210_with_boxes_map.pgm -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/maps
+running install_egg_info
+Copying ../build/completed_scripts_jetbot/completed_scripts_jetbot.egg-info to /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/lib/python3.12/site-packages/completed_scripts_jetbot-1.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/home/pavel/jetbot_orgon_ws/src/build/completed_scripts_jetbot/install.log'

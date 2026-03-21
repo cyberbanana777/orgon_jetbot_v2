@@ -1,0 +1,38 @@
+running egg_info
+creating ../../build/lidar_filter/lidar_filter.egg-info
+writing ../../build/lidar_filter/lidar_filter.egg-info/PKG-INFO
+writing dependency_links to ../../build/lidar_filter/lidar_filter.egg-info/dependency_links.txt
+writing entry points to ../../build/lidar_filter/lidar_filter.egg-info/entry_points.txt
+writing requirements to ../../build/lidar_filter/lidar_filter.egg-info/requires.txt
+writing top-level names to ../../build/lidar_filter/lidar_filter.egg-info/top_level.txt
+writing manifest file '../../build/lidar_filter/lidar_filter.egg-info/SOURCES.txt'
+reading manifest file '../../build/lidar_filter/lidar_filter.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/lidar_filter/lidar_filter.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/pavel/jetbot_orgon_ws/src/build/lidar_filter/build
+creating /home/pavel/jetbot_orgon_ws/src/build/lidar_filter/build/lib
+creating /home/pavel/jetbot_orgon_ws/src/build/lidar_filter/build/lib/lidar_filter
+copying lidar_filter/__init__.py -> /home/pavel/jetbot_orgon_ws/src/build/lidar_filter/build/lib/lidar_filter
+copying lidar_filter/lidar_filter.py -> /home/pavel/jetbot_orgon_ws/src/build/lidar_filter/build/lib/lidar_filter
+running install
+running install_lib
+creating /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/lib/python3.12/site-packages/lidar_filter
+copying /home/pavel/jetbot_orgon_ws/src/build/lidar_filter/build/lib/lidar_filter/__init__.py -> /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/lib/python3.12/site-packages/lidar_filter
+copying /home/pavel/jetbot_orgon_ws/src/build/lidar_filter/build/lib/lidar_filter/lidar_filter.py -> /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/lib/python3.12/site-packages/lidar_filter
+byte-compiling /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/lib/python3.12/site-packages/lidar_filter/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/lib/python3.12/site-packages/lidar_filter/lidar_filter.py to lidar_filter.cpython-312.pyc
+running install_data
+creating /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/share/ament_index
+creating /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/share/ament_index/resource_index
+creating /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/share/ament_index/resource_index/packages
+copying resource/lidar_filter -> /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/share/ament_index/resource_index/packages
+copying package.xml -> /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/share/lidar_filter
+creating /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/share/lidar_filter/launch
+copying launch/filter.launch.py -> /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/share/lidar_filter/launch
+running install_egg_info
+Copying ../../build/lidar_filter/lidar_filter.egg-info to /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/lib/python3.12/site-packages/lidar_filter-1.0.0-py3.12.egg-info
+running install_scripts
+Installing lidar_filter script to /home/pavel/jetbot_orgon_ws/src/install/lidar_filter/lib/lidar_filter
+writing list of installed files to '/home/pavel/jetbot_orgon_ws/src/build/lidar_filter/install.log'

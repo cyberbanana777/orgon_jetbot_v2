@@ -1,0 +1,43 @@
+[1.630s] Invoking command in '/home/pavel/jetbot_orgon_ws/src/manipulator_control': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/pavel/jetbot_orgon_ws/src/build/manipulator_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pavel/jetbot_orgon_ws/src/install/manipulator_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/manipulator_control build --build-base /home/pavel/jetbot_orgon_ws/src/build/manipulator_control/build install --record /home/pavel/jetbot_orgon_ws/src/build/manipulator_control/install.log --single-version-externally-managed install_data
+[2.011s] running egg_info
+[2.011s] creating ../build/manipulator_control/manipulator_control.egg-info
+[2.063s] writing ../build/manipulator_control/manipulator_control.egg-info/PKG-INFO
+[2.063s] writing dependency_links to ../build/manipulator_control/manipulator_control.egg-info/dependency_links.txt
+[2.063s] writing entry points to ../build/manipulator_control/manipulator_control.egg-info/entry_points.txt
+[2.065s] writing requirements to ../build/manipulator_control/manipulator_control.egg-info/requires.txt
+[2.065s] writing top-level names to ../build/manipulator_control/manipulator_control.egg-info/top_level.txt
+[2.065s] writing manifest file '../build/manipulator_control/manipulator_control.egg-info/SOURCES.txt'
+[2.181s] reading manifest file '../build/manipulator_control/manipulator_control.egg-info/SOURCES.txt'
+[2.182s] writing manifest file '../build/manipulator_control/manipulator_control.egg-info/SOURCES.txt'
+[2.182s] running build
+[2.182s] running build_py
+[2.182s] creating /home/pavel/jetbot_orgon_ws/src/build/manipulator_control/build
+[2.183s] creating /home/pavel/jetbot_orgon_ws/src/build/manipulator_control/build/lib
+[2.183s] creating /home/pavel/jetbot_orgon_ws/src/build/manipulator_control/build/lib/manipulator_control
+[2.183s] copying manipulator_control/__init__.py -> /home/pavel/jetbot_orgon_ws/src/build/manipulator_control/build/lib/manipulator_control
+[2.183s] copying manipulator_control/scara_ik_planner.py -> /home/pavel/jetbot_orgon_ws/src/build/manipulator_control/build/lib/manipulator_control
+[2.183s] copying manipulator_control/scara_teleop_gui.py -> /home/pavel/jetbot_orgon_ws/src/build/manipulator_control/build/lib/manipulator_control
+[2.187s] running install
+[2.209s] running install_lib
+[2.273s] creating /home/pavel/jetbot_orgon_ws/src/install/manipulator_control/lib/python3.12/site-packages/manipulator_control
+[2.275s] copying /home/pavel/jetbot_orgon_ws/src/build/manipulator_control/build/lib/manipulator_control/__init__.py -> /home/pavel/jetbot_orgon_ws/src/install/manipulator_control/lib/python3.12/site-packages/manipulator_control
+[2.275s] copying /home/pavel/jetbot_orgon_ws/src/build/manipulator_control/build/lib/manipulator_control/scara_ik_planner.py -> /home/pavel/jetbot_orgon_ws/src/install/manipulator_control/lib/python3.12/site-packages/manipulator_control
+[2.275s] copying /home/pavel/jetbot_orgon_ws/src/build/manipulator_control/build/lib/manipulator_control/scara_teleop_gui.py -> /home/pavel/jetbot_orgon_ws/src/install/manipulator_control/lib/python3.12/site-packages/manipulator_control
+[2.276s] byte-compiling /home/pavel/jetbot_orgon_ws/src/install/manipulator_control/lib/python3.12/site-packages/manipulator_control/__init__.py to __init__.cpython-312.pyc
+[2.277s] byte-compiling /home/pavel/jetbot_orgon_ws/src/install/manipulator_control/lib/python3.12/site-packages/manipulator_control/scara_ik_planner.py to scara_ik_planner.cpython-312.pyc
+[2.283s] byte-compiling /home/pavel/jetbot_orgon_ws/src/install/manipulator_control/lib/python3.12/site-packages/manipulator_control/scara_teleop_gui.py to scara_teleop_gui.cpython-312.pyc
+[2.284s] running install_data
+[2.284s] creating /home/pavel/jetbot_orgon_ws/src/install/manipulator_control/share/ament_index
+[2.285s] creating /home/pavel/jetbot_orgon_ws/src/install/manipulator_control/share/ament_index/resource_index
+[2.285s] creating /home/pavel/jetbot_orgon_ws/src/install/manipulator_control/share/ament_index/resource_index/packages
+[2.285s] copying resource/manipulator_control -> /home/pavel/jetbot_orgon_ws/src/install/manipulator_control/share/ament_index/resource_index/packages
+[2.285s] copying package.xml -> /home/pavel/jetbot_orgon_ws/src/install/manipulator_control/share/manipulator_control
+[2.286s] creating /home/pavel/jetbot_orgon_ws/src/install/manipulator_control/share/manipulator_control/launch
+[2.290s] copying launch/manipulator.launch.py -> /home/pavel/jetbot_orgon_ws/src/install/manipulator_control/share/manipulator_control/launch
+[2.290s] running install_egg_info
+[2.400s] Copying ../build/manipulator_control/manipulator_control.egg-info to /home/pavel/jetbot_orgon_ws/src/install/manipulator_control/lib/python3.12/site-packages/manipulator_control-0.0.0-py3.12.egg-info
+[2.401s] running install_scripts
+[2.637s] Installing scara_ik_planner script to /home/pavel/jetbot_orgon_ws/src/install/manipulator_control/lib/manipulator_control
+[2.637s] Installing scara_teleop_gui script to /home/pavel/jetbot_orgon_ws/src/install/manipulator_control/lib/manipulator_control
+[2.639s] writing list of installed files to '/home/pavel/jetbot_orgon_ws/src/build/manipulator_control/install.log'
+[2.718s] Invoked command in '/home/pavel/jetbot_orgon_ws/src/manipulator_control' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/pavel/jetbot_orgon_ws/src/build/manipulator_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pavel/jetbot_orgon_ws/src/install/manipulator_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/manipulator_control build --build-base /home/pavel/jetbot_orgon_ws/src/build/manipulator_control/build install --record /home/pavel/jetbot_orgon_ws/src/build/manipulator_control/install.log --single-version-externally-managed install_data

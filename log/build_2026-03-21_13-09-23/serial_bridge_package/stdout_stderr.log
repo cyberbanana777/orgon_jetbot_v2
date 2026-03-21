@@ -1,0 +1,61 @@
+/usr/lib/python3/dist-packages/setuptools/dist.py:744: SetuptoolsDeprecationWarning: Invalid dash-separated options
+!!
+
+        ********************************************************************************
+        Usage of dash-separated 'script-dir' will not be supported in future
+        versions. Please use the underscore name 'script_dir' instead.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+        ********************************************************************************
+
+!!
+  opt = self.warn_dash_deprecation(opt, section)
+running egg_info
+creating ../../build/serial_bridge_package/serial_bridge_package.egg-info
+writing ../../build/serial_bridge_package/serial_bridge_package.egg-info/PKG-INFO
+writing dependency_links to ../../build/serial_bridge_package/serial_bridge_package.egg-info/dependency_links.txt
+writing entry points to ../../build/serial_bridge_package/serial_bridge_package.egg-info/entry_points.txt
+writing requirements to ../../build/serial_bridge_package/serial_bridge_package.egg-info/requires.txt
+writing top-level names to ../../build/serial_bridge_package/serial_bridge_package.egg-info/top_level.txt
+writing manifest file '../../build/serial_bridge_package/serial_bridge_package.egg-info/SOURCES.txt'
+reading manifest file '../../build/serial_bridge_package/serial_bridge_package.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/serial_bridge_package/serial_bridge_package.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/pavel/jetbot_orgon_ws/src/build/serial_bridge_package/build
+creating /home/pavel/jetbot_orgon_ws/src/build/serial_bridge_package/build/lib
+creating /home/pavel/jetbot_orgon_ws/src/build/serial_bridge_package/build/lib/serial_bridge_package
+copying serial_bridge_package/__init__.py -> /home/pavel/jetbot_orgon_ws/src/build/serial_bridge_package/build/lib/serial_bridge_package
+copying serial_bridge_package/serial_bridge_node.py -> /home/pavel/jetbot_orgon_ws/src/build/serial_bridge_package/build/lib/serial_bridge_package
+copying serial_bridge_package/feedback_processor.py -> /home/pavel/jetbot_orgon_ws/src/build/serial_bridge_package/build/lib/serial_bridge_package
+copying serial_bridge_package/twist_to_command.py -> /home/pavel/jetbot_orgon_ws/src/build/serial_bridge_package/build/lib/serial_bridge_package
+running install
+running install_lib
+creating /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/lib/python3.12/site-packages/serial_bridge_package
+copying /home/pavel/jetbot_orgon_ws/src/build/serial_bridge_package/build/lib/serial_bridge_package/__init__.py -> /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/lib/python3.12/site-packages/serial_bridge_package
+copying /home/pavel/jetbot_orgon_ws/src/build/serial_bridge_package/build/lib/serial_bridge_package/serial_bridge_node.py -> /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/lib/python3.12/site-packages/serial_bridge_package
+copying /home/pavel/jetbot_orgon_ws/src/build/serial_bridge_package/build/lib/serial_bridge_package/feedback_processor.py -> /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/lib/python3.12/site-packages/serial_bridge_package
+copying /home/pavel/jetbot_orgon_ws/src/build/serial_bridge_package/build/lib/serial_bridge_package/twist_to_command.py -> /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/lib/python3.12/site-packages/serial_bridge_package
+byte-compiling /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/lib/python3.12/site-packages/serial_bridge_package/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/lib/python3.12/site-packages/serial_bridge_package/serial_bridge_node.py to serial_bridge_node.cpython-312.pyc
+byte-compiling /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/lib/python3.12/site-packages/serial_bridge_package/feedback_processor.py to feedback_processor.cpython-312.pyc
+byte-compiling /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/lib/python3.12/site-packages/serial_bridge_package/twist_to_command.py to twist_to_command.cpython-312.pyc
+running install_data
+creating /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/share/ament_index
+creating /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/share/ament_index/resource_index
+creating /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/share/ament_index/resource_index/packages
+copying resource/serial_bridge_package -> /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/share/ament_index/resource_index/packages
+copying package.xml -> /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/share/serial_bridge_package
+creating /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/share/serial_bridge_package/launch
+copying launch/serial_bringup.launch.py -> /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/share/serial_bridge_package/launch
+running install_egg_info
+Copying ../../build/serial_bridge_package/serial_bridge_package.egg-info to /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/lib/python3.12/site-packages/serial_bridge_package-1.0.0-py3.12.egg-info
+running install_scripts
+Installing feedback_processor script to /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/lib/serial_bridge_package
+Installing serial_bridge_node script to /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/lib/serial_bridge_package
+Installing twist_to_command script to /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/lib/serial_bridge_package
+writing list of installed files to '/home/pavel/jetbot_orgon_ws/src/build/serial_bridge_package/install.log'

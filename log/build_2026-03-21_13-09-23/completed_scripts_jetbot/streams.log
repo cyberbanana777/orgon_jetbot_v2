@@ -1,0 +1,66 @@
+[0.616s] Invoking command in '/home/pavel/jetbot_orgon_ws/src/completed_scripts_jetbot': AMENT_PREFIX_PATH=/home/pavel/jetbot_orgon_ws/src/install/sllidar_ros2:/home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package:/home/pavel/jetbot_orgon_ws/src/install/lidar_filter:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pavel/jetbot_orgon_ws/src/install/sllidar_ros2:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/pavel/jetbot_orgon_ws/src/build/completed_scripts_jetbot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/lib/python3.12/site-packages:/home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/lib/python3.12/site-packages:/home/pavel/jetbot_orgon_ws/src/install/lidar_filter/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/completed_scripts_jetbot build --build-base /home/pavel/jetbot_orgon_ws/src/build/completed_scripts_jetbot/build install --record /home/pavel/jetbot_orgon_ws/src/build/completed_scripts_jetbot/install.log --install-scripts $base/lib/completed_scripts_jetbot --single-version-externally-managed install_data
+[0.711s] /usr/lib/python3/dist-packages/setuptools/dist.py:744: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[0.711s] !!
+[0.711s] 
+[0.711s]         ********************************************************************************
+[0.711s]         Usage of dash-separated 'script-dir' will not be supported in future
+[0.711s]         versions. Please use the underscore name 'script_dir' instead.
+[0.711s] 
+[0.711s]         This deprecation is overdue, please update your project and remove deprecated
+[0.711s]         calls to avoid build errors in the future.
+[0.711s] 
+[0.711s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[0.711s]         ********************************************************************************
+[0.711s] 
+[0.711s] !!
+[0.711s]   opt = self.warn_dash_deprecation(opt, section)
+[0.817s] running egg_info
+[0.817s] creating ../build/completed_scripts_jetbot/completed_scripts_jetbot.egg-info
+[0.832s] writing ../build/completed_scripts_jetbot/completed_scripts_jetbot.egg-info/PKG-INFO
+[0.832s] writing dependency_links to ../build/completed_scripts_jetbot/completed_scripts_jetbot.egg-info/dependency_links.txt
+[0.832s] writing requirements to ../build/completed_scripts_jetbot/completed_scripts_jetbot.egg-info/requires.txt
+[0.832s] writing top-level names to ../build/completed_scripts_jetbot/completed_scripts_jetbot.egg-info/top_level.txt
+[0.832s] writing manifest file '../build/completed_scripts_jetbot/completed_scripts_jetbot.egg-info/SOURCES.txt'
+[0.862s] reading manifest file '../build/completed_scripts_jetbot/completed_scripts_jetbot.egg-info/SOURCES.txt'
+[0.863s] writing manifest file '../build/completed_scripts_jetbot/completed_scripts_jetbot.egg-info/SOURCES.txt'
+[0.863s] running build
+[0.863s] running build_py
+[0.863s] creating /home/pavel/jetbot_orgon_ws/src/build/completed_scripts_jetbot/build
+[0.863s] creating /home/pavel/jetbot_orgon_ws/src/build/completed_scripts_jetbot/build/lib
+[0.863s] creating /home/pavel/jetbot_orgon_ws/src/build/completed_scripts_jetbot/build/lib/completed_scripts_jetbot
+[0.863s] copying completed_scripts_jetbot/__init__.py -> /home/pavel/jetbot_orgon_ws/src/build/completed_scripts_jetbot/build/lib/completed_scripts_jetbot
+[0.863s] running install
+[0.868s] running install_lib
+[0.883s] creating /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/lib/python3.12/site-packages/completed_scripts_jetbot
+[0.883s] copying /home/pavel/jetbot_orgon_ws/src/build/completed_scripts_jetbot/build/lib/completed_scripts_jetbot/__init__.py -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/lib/python3.12/site-packages/completed_scripts_jetbot
+[0.883s] byte-compiling /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/lib/python3.12/site-packages/completed_scripts_jetbot/__init__.py to __init__.cpython-312.pyc
+[0.883s] running install_data
+[0.883s] creating /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/ament_index
+[0.884s] creating /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/ament_index/resource_index
+[0.884s] creating /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/ament_index/resource_index/packages
+[0.884s] copying resource/completed_scripts_jetbot -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/ament_index/resource_index/packages
+[0.884s] copying package.xml -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot
+[0.884s] creating /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/launch
+[0.884s] copying launch/jetbot_sensors_and_motors.launch.py -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/launch
+[0.884s] copying launch/rviz_and_robot_description.launch.py -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/launch
+[0.884s] copying launch/navigation.launch.py -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/launch
+[0.884s] copying launch/load_map.launch.py -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/launch
+[0.884s] copying launch/mapping.launch.py -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/launch
+[0.884s] copying launch/teleop.launch.py -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/launch
+[0.884s] creating /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/config
+[0.884s] copying config/navigation_param_real.yaml -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/config
+[0.884s] copying config/mapper_params_real.yaml -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/config
+[0.885s] copying config/amcl_params_real.yaml -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/config
+[0.885s] copying config/teleop_params.yaml -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/config
+[0.885s] creating /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/rviz
+[0.885s] copying rviz/full.rviz -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/rviz
+[0.885s] creating /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/maps
+[0.885s] copying maps/map.yaml -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/maps
+[0.885s] copying maps/map.pgm -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/maps
+[0.885s] copying maps/G210_with_boxes_map.yaml -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/maps
+[0.885s] copying maps/G210_with_boxes_map.pgm -> /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/share/completed_scripts_jetbot/maps
+[0.885s] running install_egg_info
+[0.902s] Copying ../build/completed_scripts_jetbot/completed_scripts_jetbot.egg-info to /home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/lib/python3.12/site-packages/completed_scripts_jetbot-1.0.0-py3.12.egg-info
+[0.902s] running install_scripts
+[1.007s] writing list of installed files to '/home/pavel/jetbot_orgon_ws/src/build/completed_scripts_jetbot/install.log'
+[1.030s] Invoked command in '/home/pavel/jetbot_orgon_ws/src/completed_scripts_jetbot' returned '0': AMENT_PREFIX_PATH=/home/pavel/jetbot_orgon_ws/src/install/sllidar_ros2:/home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package:/home/pavel/jetbot_orgon_ws/src/install/lidar_filter:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pavel/jetbot_orgon_ws/src/install/sllidar_ros2:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/pavel/jetbot_orgon_ws/src/build/completed_scripts_jetbot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pavel/jetbot_orgon_ws/src/install/completed_scripts_jetbot/lib/python3.12/site-packages:/home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/lib/python3.12/site-packages:/home/pavel/jetbot_orgon_ws/src/install/lidar_filter/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/completed_scripts_jetbot build --build-base /home/pavel/jetbot_orgon_ws/src/build/completed_scripts_jetbot/build install --record /home/pavel/jetbot_orgon_ws/src/build/completed_scripts_jetbot/install.log --install-scripts $base/lib/completed_scripts_jetbot --single-version-externally-managed install_data

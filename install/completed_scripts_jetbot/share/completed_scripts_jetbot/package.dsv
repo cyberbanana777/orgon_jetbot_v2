@@ -1,0 +1,6 @@
+source;share/completed_scripts_jetbot/hook/pythonpath.ps1
+source;share/completed_scripts_jetbot/hook/pythonpath.dsv
+source;share/completed_scripts_jetbot/hook/pythonpath.sh
+source;share/completed_scripts_jetbot/hook/ament_prefix_path.ps1
+source;share/completed_scripts_jetbot/hook/ament_prefix_path.dsv
+source;share/completed_scripts_jetbot/hook/ament_prefix_path.sh

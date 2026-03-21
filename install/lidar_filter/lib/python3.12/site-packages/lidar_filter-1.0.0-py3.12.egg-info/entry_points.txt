@@ -1,0 +1,2 @@
+[console_scripts]
+lidar_filter = lidar_filter.lidar_filter:main

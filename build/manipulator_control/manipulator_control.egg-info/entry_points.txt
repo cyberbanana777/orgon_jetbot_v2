@@ -1,0 +1,3 @@
+[console_scripts]
+scara_ik_planner = manipulator_control.scara_ik_planner:main
+scara_teleop_gui = manipulator_control.scara_teleop_gui:main

@@ -1,0 +1,4 @@
+[console_scripts]
+feedback_processor = serial_bridge_package.feedback_processor:main
+serial_bridge_node = serial_bridge_package.serial_bridge_node:main
+twist_to_command = serial_bridge_package.twist_to_command:main

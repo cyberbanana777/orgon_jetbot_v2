@@ -1,0 +1,505 @@
+<?xml version="1.0"?>
+<robot name="visual">
+    <material name="blue"> <color rgba="0 0 1 1"/> </material>
+    <material name="black"> <color rgba="0 0 0 1"/> </material>
+    <material name="red"> <color rgba="1 0 0 1"/> </material>
+    <material name="white"> <color rgba="1 1 1 1"/> </material>
+    <material name="green"> <color rgba="0 1 0 1"/> </material>
+    <material name="silver"> <color rgba="0.75 0.75 0.75 1"/> </material>
+    <material name="grey"> <color rgba="0.5 0.5 0.5 1"/> </material>
+
+    <!-- Odom link (корень без инерции и коллизии)
+    <link name="odom"/> -->
+
+    <!-- Корпус джетбота (с инерцией и коллизией) -->
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <box size="0.190 0.162 0.048"/>
+            </geometry>
+            <material name="green"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.190 0.162 0.048"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="3"/>
+            <inertia ixx="0.001" ixy="0" ixz="0"
+                iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+    </link>
+
+    <!-- <joint name="base_link_joint" type="fixed">
+        <parent link="odom"/>
+        <child link="base_link"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint> -->
+
+    <!-- RP-Lidar (с коллизией и инерцией) -->
+    <link name="lidar">
+        <visual>
+            <geometry>
+                <cylinder length="0.042" radius="0.038"/>
+            </geometry>
+            <material name="black"/>
+            <origin xyz="0 0 0.021" rpy="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.042" radius="0.038"/>
+            </geometry>
+            <origin xyz="0 0 0.021" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.5"/>
+            <inertia ixx="0.001" ixy="0" ixz="0"
+                iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+    </link>
+    
+    <joint name="base_link_lidar_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="lidar"/>
+        <origin xyz="0.11491 0 -0.0239" rpy="0 0 2.3562"/>
+    </joint>
+
+    <!-- Left wheel (с коллизией и инерцией) -->
+    <link name="left_wheel">
+        <visual>
+            <geometry>
+                <cylinder length="0.0156" radius="0.033625"/>
+            </geometry>
+            <material name="black"/>
+            <origin xyz="0 0.0078 0" rpy="1.5708 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.0156" radius="0.033625"/>
+            </geometry>
+            <origin xyz="0 0.0078 0" rpy="1.5708 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.1"/>
+            <inertia ixx="0.001" ixy="0" ixz="0"
+                iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+    </link>
+    
+    <joint name="base_link_left_wheel_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="left_wheel"/>
+        <origin xyz="0.03004 0.08107 -0.00937" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <!-- Right wheel (с коллизией и инерцией) -->
+    <link name="right_wheel">
+        <visual>
+            <geometry>
+                <cylinder length="0.0156" radius="0.033625"/>
+            </geometry>
+            <material name="black"/>
+            <origin xyz="0 -0.0078 0" rpy="1.5708 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.0156" radius="0.033625"/>
+            </geometry>
+            <origin xyz="0 -0.0078 0" rpy="1.5708 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.1"/>
+            <inertia ixx="0.001" ixy="0" ixz="0"
+                iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+    </link>
+    
+    <joint name="base_link_right_wheel_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="right_wheel"/>
+        <origin xyz="0.03004 -0.08107 -0.00937" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <!-- Платформа манипулятора -->
+    <link name="manipulator_platform">
+        <visual>
+            <geometry>
+                <cylinder length="0.012" radius="0.04"/>
+            </geometry>
+            <material name="green"/>
+            <origin xyz="0.04 0 0.006" rpy="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.012" radius="0.04"/>
+            </geometry>
+            <origin xyz="0.04 0 0.006" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.1"/>
+            <inertia ixx="0.001" ixy="0" ixz="0"
+                iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+    </link>
+    
+    <joint name="base_link_manipulator_platform_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="manipulator_platform"/>
+        <origin xyz="0.07491 0 0.0239" rpy="0 0 0"/>
+    </joint>
+
+     <!-- =============================================================== Манипулятор =============================================================== -->
+
+    <!-- База манипулятора (с инерцией и коллизией) -->
+    <link name="manipulator_base_link">
+        <visual>
+            <geometry>
+                <box size="0.04 0.038 0.0321"/>
+            </geometry>
+            <material name="blue"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.04 0.038 0.0321"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="0.001" ixy="0" ixz="0"
+                iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+    </link>
+
+    <joint name="manipulator_platform_manipulator_base_link_joint" type="fixed">
+        <parent link="manipulator_platform"/>
+        <child link="manipulator_base_link"/>
+        <origin xyz="0.04302 -0.0137 0.02805" rpy="0 0 0"/>
+    </joint>
+
+    <!-- Шарнир на базе -->
+    <link name="base_hinge">
+        <visual>
+            <geometry>
+                <cylinder length="0.025" radius="0.006"/>
+            </geometry>
+            <material name="silver"/>
+            <origin xyz="0 0 0" rpy="1.57 0 0"/>
+        </visual>
+    </link>
+    
+    <joint name="manipulator_base_hinge_joint" type="fixed">
+        <parent link="manipulator_base_link"/>
+        <child link="base_hinge"/>
+        <origin xyz="0.0101 -0.015 0.00655" rpy="0 0 0"/>
+    </joint>
+
+    <!-- Первое звено (с инерцией и коллизией) -->
+    <link name="first_link">
+        <visual>
+            <geometry>
+                <box size="0.083 0.005 0.0165"/>
+            </geometry>
+            <material name="black"/>
+            <origin xyz="0.0325 -0.0025 0" rpy="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.083 0.005 0.0165"/>
+            </geometry>
+            <origin xyz="0.0325 -0.0025 0" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.5"/>
+            <inertia ixx="0.001" ixy="0" ixz="0"
+                iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+    </link>
+
+    <joint name="base_first_link_joint" type="revolute">
+        <parent link="manipulator_base_link"/>
+        <child link="first_link"/>
+        <origin xyz="0.0101 -0.027 0.00655" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-3.14" upper="3.14" effort="10" velocity="1"/>
+    </joint>
+
+    <!-- Шарнир между первым и вторым звеном -->
+    <link name="first_link_hinge">
+        <visual>
+            <geometry>
+                <cylinder length="0.012" radius="0.003"/>
+            </geometry>
+            <material name="silver"/>
+            <origin xyz="0 0 0" rpy="1.57 0 0"/>
+        </visual>
+    </link>
+    
+    <joint name="first_link_first_link_hinge_joint" type="fixed">
+        <parent link="first_link"/>
+        <child link="first_link_hinge"/>
+        <origin xyz="0.0634 0.0051 0" rpy="0 0 0"/>
+    </joint>
+
+    <!-- Второе звено (с инерцией и коллизией) -->
+    <link name="second_link">
+        <visual>
+            <geometry>
+                <box size="0.06 0.0165 0.012"/>
+            </geometry>
+            <material name="blue"/>
+            <origin xyz="0.0241 0.00825 0.0023" rpy="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.06 0.0165 0.012"/>
+            </geometry>
+            <origin xyz="0.0241 0.00825 0.0023" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.3"/>
+            <inertia ixx="0.001" ixy="0" ixz="0"
+                iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+    </link>
+
+    <joint name="first_second_links_joint" type="revolute">
+        <parent link="first_link"/>
+        <child link="second_link"/>
+        <origin xyz="0.0634 0.0051 0" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-3.14" upper="3.14" effort="10" velocity="1"/>
+    </joint>
+
+    <!-- Крепление платформы -->
+    <link name="second_link_fastening">
+        <visual>
+            <geometry>
+                <box size="0.01 0.01 0.01"/>
+            </geometry>
+            <material name="silver"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </visual>
+    </link>
+    
+    <joint name="second_link_second_link_fastening_joint" type="fixed">
+        <parent link="second_link"/>
+        <child link="second_link_fastening"/>
+        <origin xyz="0.0482 0.00825 -0.0035" rpy="0 0 0"/>
+    </joint>
+
+    <!-- Платформа второго звена (с инерцией и коллизией) -->
+    <link name="second_link_platform">
+        <visual>
+            <geometry>
+                <box size="0.044 0.029 0.004"/>
+            </geometry>
+            <material name="black"/>
+            <origin xyz="0.0065 0 -0.002" rpy="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.044 0.029 0.004"/>
+            </geometry>
+            <origin xyz="0.0065 0 -0.002" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.2"/>
+            <inertia ixx="0.001" ixy="0" ixz="0"
+                iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+    </link>
+
+    <joint name="second_link_platform_joint" type="fixed">
+        <parent link="second_link"/>
+        <child link="second_link_platform"/>
+        <origin xyz="0.0386 0.00825 -0.0084" rpy="0 0 0"/>
+    </joint>
+
+    <!--  Шарнир левого хвата -->
+    <link name="left_finger_hinge">
+        <visual>
+            <geometry>
+                <cylinder length="0.006" radius="0.002"/>
+            </geometry>
+            <material name="silver"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </visual>
+    </link>
+    
+    <joint name="left_finger_left_finger_hinge_joint" type="fixed">
+        <parent link="second_link_platform"/>
+        <child link="left_finger_hinge"/>
+        <origin xyz="0.023 0.0092 -0.006" rpy="0 0 0"/>
+    </joint>
+
+    <!-- Левый хват манипулятора -->
+    <link name="left_finger_link">
+        <visual>
+            <geometry>
+                <box size="0.0584 0.0125 0.0025"/>
+            </geometry>
+            <material name="red"/>
+            <origin xyz="0.0183 -0.00275 -0.00125" rpy="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.0584 0.0125 0.0025"/>
+            </geometry>
+            <origin xyz="0.0183 -0.00275 -0.00125" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.1"/>
+            <inertia ixx="0.001" ixy="0" ixz="0"
+                iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+    </link>
+
+    <joint name="platform_left_finger_link_joint" type="revolute">
+        <parent link="second_link_platform"/>
+        <child link="left_finger_link"/>
+        <origin xyz="0.023 0.0092 -0.006" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="0" upper="0.785" effort="10" velocity="1"/>
+    </joint>
+
+    <!-- Шарнир правого хвата -->
+    <link name="right_finger_hinge">
+        <visual>
+            <geometry>
+                <cylinder length="0.006" radius="0.002"/>
+            </geometry>
+            <material name="silver"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </visual>
+    </link>
+    
+    <joint name="right_finger_right_finger_hinge_joint" type="fixed">
+        <parent link="second_link_platform"/>
+        <child link="right_finger_hinge"/>
+        <origin xyz="0.023 -0.0092 -0.006" rpy="0 0 0"/>
+    </joint>
+
+    <!-- Правый хват манипулятора -->
+    <link name="right_finger_link">
+        <visual>
+            <geometry>
+                <box size="0.0584 0.0125 0.0025"/>
+            </geometry>
+            <material name="red"/>
+            <origin xyz="0.0183 0.00275 -0.00125" rpy="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.0584 0.0125 0.0025"/>
+            </geometry>
+            <origin xyz="0.0183 0.00275 -0.00125" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.1"/>
+            <inertia ixx="0.001" ixy="0" ixz="0"
+                iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+    </link>
+
+    <joint name="platform_right_finger_link_joint" type="revolute">
+        <parent link="second_link_platform"/>
+        <child link="right_finger_link"/>
+        <origin xyz="0.023 -0.0092 -0.006" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-0.785" upper="0" effort="10" velocity="1"/>
+    </joint>
+
+    <!-- =============================================================== Манипулятор =============================================================== -->
+
+    <!-- Мозги (с инерцией и коллизией) -->
+    <link name="sandwich">
+        <visual>
+            <geometry>
+                <box size="0.103 0.154 0.097"/>
+            </geometry>
+            <material name="grey"/>
+            <origin xyz="0 0 0.0485" rpy="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.103 0.154 0.097"/>
+            </geometry>
+            <origin xyz="0 0 0.0485" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="0.001" ixy="0" ixz="0"
+                iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+    </link>
+
+    <joint name="base_link_sandwich_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="sandwich"/>
+        <origin xyz="0.0075 -0.004 0.024" rpy="0 0 0"/>
+    </joint>
+
+    <!-- Левая антенна (с коллизией и инерцией) -->
+    <link name="left_antenn">
+        <visual>
+            <geometry>
+                <cylinder length="0.194" radius="0.005"/>
+            </geometry>
+            <material name="black"/>
+            <origin xyz="0 0 0.097" rpy="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.194" radius="0.005"/>
+            </geometry>
+            <origin xyz="0 0 0.097" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.1"/>
+            <inertia ixx="0.001" ixy="0" ixz="0"
+                iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+    </link>
+    
+    <joint name="base_link_left_antenn_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="left_antenn"/>
+        <origin xyz="-0.075 0.045 0.024" rpy="0 0 0"/>
+    </joint>
+
+    <!-- Правая антенна (с коллизией и инерцией) -->
+    <link name="right_antenn">
+        <visual>
+            <geometry>
+                <cylinder length="0.194" radius="0.005"/>
+            </geometry>
+            <material name="black"/>
+            <origin xyz="0 0 0.097" rpy="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.194" radius="0.005"/>
+            </geometry>
+            <origin xyz="0 0 0.097" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.1"/>
+            <inertia ixx="0.001" ixy="0" ixz="0"
+                iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+    </link>
+    
+    <joint name="base_link_right_antenn_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="right_antenn"/>
+        <origin xyz="-0.075 -0.045 0.024" rpy="0 0 0"/>
+    </joint>
+
+</robot>
