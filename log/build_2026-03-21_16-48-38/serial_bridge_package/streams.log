@@ -1,0 +1,39 @@
+[1.955s] Invoking command in '/home/pavel/jetbot_orgon_ws/src/jetbot_hardware/serial_bridge_package': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/pavel/jetbot_orgon_ws/src/build/serial_bridge_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/serial_bridge_package build --build-base /home/pavel/jetbot_orgon_ws/src/build/serial_bridge_package/build install --record /home/pavel/jetbot_orgon_ws/src/build/serial_bridge_package/install.log --install-scripts $base/lib/serial_bridge_package --single-version-externally-managed install_data
+[2.115s] /usr/lib/python3/dist-packages/setuptools/dist.py:744: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[2.116s] !!
+[2.116s] 
+[2.116s]         ********************************************************************************
+[2.116s]         Usage of dash-separated 'script-dir' will not be supported in future
+[2.116s]         versions. Please use the underscore name 'script_dir' instead.
+[2.116s] 
+[2.116s]         This deprecation is overdue, please update your project and remove deprecated
+[2.116s]         calls to avoid build errors in the future.
+[2.116s] 
+[2.116s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[2.117s]         ********************************************************************************
+[2.117s] 
+[2.117s] !!
+[2.117s]   opt = self.warn_dash_deprecation(opt, section)
+[2.297s] running egg_info
+[2.322s] writing ../../build/serial_bridge_package/serial_bridge_package.egg-info/PKG-INFO
+[2.322s] writing dependency_links to ../../build/serial_bridge_package/serial_bridge_package.egg-info/dependency_links.txt
+[2.323s] writing entry points to ../../build/serial_bridge_package/serial_bridge_package.egg-info/entry_points.txt
+[2.323s] writing requirements to ../../build/serial_bridge_package/serial_bridge_package.egg-info/requires.txt
+[2.323s] writing top-level names to ../../build/serial_bridge_package/serial_bridge_package.egg-info/top_level.txt
+[2.396s] reading manifest file '../../build/serial_bridge_package/serial_bridge_package.egg-info/SOURCES.txt'
+[2.397s] adding license file 'LICENSE'
+[2.397s] writing manifest file '../../build/serial_bridge_package/serial_bridge_package.egg-info/SOURCES.txt'
+[2.397s] running build
+[2.397s] running build_py
+[2.397s] running install
+[2.397s] running install_lib
+[2.412s] running install_data
+[2.412s] running install_egg_info
+[2.440s] removing '/home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/lib/python3.12/site-packages/serial_bridge_package-1.0.0-py3.12.egg-info' (and everything under it)
+[2.440s] Copying ../../build/serial_bridge_package/serial_bridge_package.egg-info to /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/lib/python3.12/site-packages/serial_bridge_package-1.0.0-py3.12.egg-info
+[2.441s] running install_scripts
+[2.576s] Installing feedback_processor script to /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/lib/serial_bridge_package
+[2.576s] Installing serial_bridge_node script to /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/lib/serial_bridge_package
+[2.576s] Installing twist_to_command script to /home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/lib/serial_bridge_package
+[2.576s] writing list of installed files to '/home/pavel/jetbot_orgon_ws/src/build/serial_bridge_package/install.log'
+[2.614s] Invoked command in '/home/pavel/jetbot_orgon_ws/src/jetbot_hardware/serial_bridge_package' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/pavel/jetbot_orgon_ws/src/build/serial_bridge_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pavel/jetbot_orgon_ws/src/install/serial_bridge_package/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/serial_bridge_package build --build-base /home/pavel/jetbot_orgon_ws/src/build/serial_bridge_package/build install --record /home/pavel/jetbot_orgon_ws/src/build/serial_bridge_package/install.log --install-scripts $base/lib/serial_bridge_package --single-version-externally-managed install_data

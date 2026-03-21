@@ -30,7 +30,7 @@ def generate_launch_description():
     )
 
     bridge_node = Node(
-    package='jetbot',
+    package='jetbot_orgon_description',
     executable='joint_state_bridge.py',
     name='joint_state_bridge',
     output='screen'
