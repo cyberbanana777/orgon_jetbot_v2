@@ -1,3 +1,0 @@
-[console_scripts]
-cords_detector = detector.color_detector:main
-shape_detector = detector.shape_detector:main
