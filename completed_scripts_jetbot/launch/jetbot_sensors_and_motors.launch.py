@@ -90,7 +90,7 @@ def launch_setup(context, *args, **kwargs):
     return [
         serial_bridge_launch,
         sllidar_launch,
-        lidar_filter_launch,
+        # lidar_filter_launch,
     ]
 
 
