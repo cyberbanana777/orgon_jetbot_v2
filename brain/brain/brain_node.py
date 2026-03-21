@@ -6,11 +6,16 @@ from std_msgs.msg import String
 from geometry_msgs.msg import PoseWithCovarianceStamped
 from geometry_msgs.msg import PoseStamped
 from geometry_msgs.msg import Pose2D
+import tf2_ros
+from tf2_ros import TransformException
+from geometry_msgs.msg import PointStamped
+import tf2_geometry_msgs
 import math
 import sys
 import time
 
 class Brain(Node):
+
     def __init__(self):
         super().__init__('brain')
 
@@ -34,6 +39,10 @@ class Brain(Node):
         self.waiting_for_manipulator = False
         self.manipulator_position_tolerance = 0.01
         self.manipulator_orientation_tolerance = 0.1
+
+        # TF2
+        self.tf_buffer = tf2_ros.Buffer()
+        self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
 
         # Публикаторы
 
@@ -235,14 +244,86 @@ class Brain(Node):
     # ========== Функции объектной логики ==========
 
 
-    def target_pose_callback(self, msg):
-        """Парсим полученне объекты и их координаты"""
-        self.get_logger().info(f'Получено сообщение от CV: {msg.data}')
+    def target_pose_callback(self, msg): # это пока не точно
+        """Получаем координаты объекта из CV и преобразуем в map"""
+
+        try:
+            parts = msg.data.strip().split()
+            x_cam = float(parts[0])
+            y_cam = float(parts[1])
+            z_cam = float(parts[2])
+
+            self.get_logger().info(
+                f'CV (camera frame): x={x_cam}, y={y_cam}, z={z_cam}'
+            )
+
+            # преобразование camera → map
+            result = self.transform_point(
+                x_cam,
+                y_cam,
+                z_cam,
+                from_frame='camera_link',  # ВАЖНО: имя фрейма камеры
+                to_frame='map'
+            )
+
+            if result is None:
+                return
+
+            x_map, y_map, z_map = result
+
+            self.get_logger().info(
+                f'MAP: x={x_map:.2f}, y={y_map:.2f}, z={z_map:.2f}'
+            )
+
+            # 👉 можно отправить роботу или манипулятору
+            self.publish_robot_goal(x_map, y_map, 0.0)
+
+        except Exception as e:
+            self.get_logger().warn(f'Ошибка парсинга CV: {e}')
 
 
 
     # ========== Функции transform ==========
 
+
+    def transform_point(self, x, y, z, from_frame, to_frame='map'):
+        """Преобразование точки между системами координат (video --> map) через tf2"""
+
+        point = PointStamped()
+        point.header.frame_id = from_frame
+        point.header.stamp = self.get_clock().now().to_msg()
+
+        point.point.x = x
+        point.point.y = y
+        point.point.z = z
+
+        try:
+            transform = self.tf_buffer.lookup_transform(
+                to_frame,
+                from_frame,
+                rclpy.time.Time()
+            )
+
+            transformed_point = tf2_geometry_msgs.do_transform_point(point, transform)
+
+            return (
+                transformed_point.point.x,
+                transformed_point.point.y,
+                transformed_point.point.z
+            )
+
+        except TransformException as e:
+            self.get_logger().warn(f'Ошибка TF: {e}')
+            return None
+    
+
+    def base_to_manipulator(self, x, y, z):
+        """Преобразование точки из base_link в систему манипулятора"""
+        return self.transform_point(
+            x, y, z,
+            from_frame='base_link',
+            to_frame='arm_base'
+        )
 
     
 
