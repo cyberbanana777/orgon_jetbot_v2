@@ -55,7 +55,7 @@ class Brain(Node):
         self.manip_pub = self.create_publisher(Int32, '/manipulator_goal', 10)
 
         # --- Публикация команд схвату (заглушка) ---
-        self.grip_pub = self.create_publisher(String, '/grip_command', 10)
+        self.grip_pub = self.create_publisher(String, '/manipulator_control', 10)
 
         # --- Подписка на AMCL позу ---
         self.amcl_sub = self.create_subscription(PoseStamped, '/amcl_pose', self.amcl_pose_callback, 10)
@@ -105,11 +105,10 @@ class Brain(Node):
     # ========== Манипулятор ==========
     def send_manipulator_goal(self, pose_id: int):
         """Отправить цель манипулятору (позиция 1,2,3)."""
-        msg = Int32()
-        msg.data = pose_id
-        self.manip_pub.publish(msg)
-        self.get_logger().info(f'Отправлена цель манипулятору: {pose_id}')
-        self.manipulator_going_to_goal = True
+        msg = String()
+        msg.data = 'low_opened'
+        self.grip_pub.publish(msg)
+        self.get_logger().info('Схват сжат')
 
     def handle_manipulator_goal_reached(self):
         """Обработка достижения цели манипулятором (вызывается из подписки)."""
@@ -119,13 +118,13 @@ class Brain(Node):
     # ========== Схват ==========
     def grip_close(self):
         msg = String()
-        msg.data = 'close'
+        msg.data = 'low_closed'
         self.grip_pub.publish(msg)
         self.get_logger().info('Схват сжат')
 
     def grip_open(self):
         msg = String()
-        msg.data = 'open'
+        msg.data = 'high_opened'
         self.grip_pub.publish(msg)
         self.get_logger().info('Схват разжат')
 

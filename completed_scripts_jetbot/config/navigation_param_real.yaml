@@ -234,22 +234,22 @@ local_costmap:
       required_movement_radius: 0.1
       # если за movement_time_allowance (10 с) робот не сместился на required_movement_radius (0.5) м, считается, что он застрял, и запускается recovery.
 
-    # goal_checker_plugins:
-    # - goal_checker
-    # goal_checker:
-    #   plugin: nav2_controller::SimpleGoalChecker
-    #   stateful: true # цель считается достигнутой, если робот вошёл в допуск и не выходит из него (защита от проскальзывания).
-    #   xy_goal_tolerance: 0.08 # допуск по положению xy
-    #   yaw_goal_tolerance: 0.1 # допуск по положению yaw
-
-
     goal_checker_plugins:
-    - rotate_to_goal
+    - goal_checker
+    goal_checker:
+      plugin: nav2_controller::SimpleGoalChecker
+      stateful: true # цель считается достигнутой, если робот вошёл в допуск и не выходит из него (защита от проскальзывания).
+      xy_goal_tolerance: 0.08 # допуск по положению xy
+      yaw_goal_tolerance: 0.1 # допуск по положению yaw
+
+
+    # goal_checker_plugins:
+    # - rotate_to_goal
     
-    rotate_to_goal:
-      plugin: nav2_controller::RotateToGoal
-      xy_goal_tolerance: 0.08
-      yaw_goal_tolerance: 0.1
+    # rotate_to_goal:
+    #   plugin: nav2_controller::RotateToGoal
+    #   xy_goal_tolerance: 0.08
+    #   yaw_goal_tolerance: 0.1
 
     controller_plugins:
     - FollowPath

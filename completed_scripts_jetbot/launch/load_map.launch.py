@@ -18,8 +18,8 @@ def launch_setup(context, *args, **kwargs):
     path_to_pkg = get_package_share_directory('completed_scripts_jetbot')
 
     acml_config_yaml_real = os.path.join(path_to_pkg, 'config', 'amcl_params_real.yaml')
-    map_file = os.path.join(path_to_pkg, 'maps', 'map.yaml')
-    # map_file = os.path.join(path_to_pkg, 'maps', 'G210_with_boxes_map.yaml')
+    map_file = os.path.join(path_to_pkg, 'maps', 'poligon.yaml')
+        # map_file = os.path.join(path_to_pkg, 'maps', 'G210_with_boxes_map.yaml')
 
     acml_node_real = Node(
         package='nav2_amcl',
