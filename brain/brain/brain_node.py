@@ -18,8 +18,7 @@ class Brain(Node):
 
     def __init__(self):
         super().__init__('brain')
-
-        # Переменные состояния навигации
+        
         self.current_pose = None
         self.current_goal = None
         self.sequence_index = 0
