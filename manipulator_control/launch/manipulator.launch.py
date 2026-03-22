@@ -13,7 +13,7 @@ def generate_launch_description():
             package='manipulator_control',
             executable='scara_ik_planner',
             name='scara_ik_planner',
-            parameters=[{'a1': 0.054, 'a2': 0.100, 'ARM': 1}],
+            parameters=[{'a1': 0.054, 'a2': 0.100, 'ARM': -1}],
             output='screen'
         ),
     ])

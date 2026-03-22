@@ -23,6 +23,7 @@ class ScaraTeleopGUI(Node):
         self.y_max = self.get_parameter('y_max').value
         self.grip_min = self.get_parameter('grip_min').value
         self.grip_max = self.get_parameter('grip_max').value
+        self.scaller = 100
         
         # Издатель целевой точки
         self.pose_pub = self.create_publisher(Pose2D, 'hand_of_god/target_pose', 10)
@@ -45,7 +46,7 @@ class ScaraTeleopGUI(Node):
         
         # X слайдер
         ttk.Label(self.root, text="X (м)").grid(row=0, column=0, padx=5, pady=5)
-        self.x_scale = ttk.Scale(self.root, from_=self.x_min, to=self.x_max, 
+        self.x_scale = ttk.Scale(self.root, from_=self.x_min * self.scaller, to=self.x_max * self.scaller, 
                                   orient=tk.HORIZONTAL, command=self.on_x_change)
         self.x_scale.set(self.x_val)
         self.x_scale.grid(row=0, column=1, padx=5, pady=5, sticky='we')
@@ -54,7 +55,7 @@ class ScaraTeleopGUI(Node):
         
         # Y слайдер
         ttk.Label(self.root, text="Y (м)").grid(row=1, column=0, padx=5, pady=5)
-        self.y_scale = ttk.Scale(self.root, from_=self.y_min, to=self.y_max,
+        self.y_scale = ttk.Scale(self.root, from_=self.y_min * self.scaller, to=self.y_max * self.scaller,
                                   orient=tk.HORIZONTAL, command=self.on_y_change)
         self.y_scale.set(self.y_val)
         self.y_scale.grid(row=1, column=1, padx=5, pady=5, sticky='we')
@@ -63,7 +64,7 @@ class ScaraTeleopGUI(Node):
         
         # Grip слайдер (сила схвата)
         ttk.Label(self.root, text="Grip").grid(row=2, column=0, padx=5, pady=5)
-        self.grip_scale = ttk.Scale(self.root, from_=self.grip_min, to=self.grip_max,
+        self.grip_scale = ttk.Scale(self.root, from_=self.grip_min * self.scaller, to=self.grip_max * self.scaller,
                                      orient=tk.HORIZONTAL, command=self.on_grip_change)
         self.grip_scale.set(self.grip_val)
         self.grip_scale.grid(row=2, column=1, padx=5, pady=5, sticky='we')
@@ -96,9 +97,9 @@ class ScaraTeleopGUI(Node):
     
     def publish_pose(self):
         msg = Pose2D()
-        msg.x = self.x_val
-        msg.y = self.y_val
-        msg.theta = self.grip_val
+        msg.x = self.x_val / 100
+        msg.y = self.y_val / 100
+        msg.theta = self.grip_val / 100
         self.pose_pub.publish(msg)
         self.get_logger().debug(f'Published: x={msg.x:.3f}, y={msg.y:.3f}, grip={msg.theta:.3f}')
 

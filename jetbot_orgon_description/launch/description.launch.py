@@ -30,8 +30,8 @@ def generate_launch_description():
 
     # joint_state_publisher_gui (для движения суставов)
     jsp_node = Node(
-        package='joint_state_publisher',
-        executable='joint_state_publisher',
+        package='jetbot_orgon_description',
+        executable='joint_state_bridge.py',
         output='screen'
     )
 

@@ -12,7 +12,7 @@ class ScaraIKPlanner(Node):
         self.declare_parameter('a1', 0.054)
         self.declare_parameter('a2', 0.100)
         # Конфигурация руки: +1 или -1
-        self.declare_parameter('ARM', 1)
+        self.declare_parameter('ARM', -1)
         self.declare_parameter('prefix', 'hand_of_god')
         
         self.a1 = self.get_parameter('a1').value
@@ -59,7 +59,7 @@ class ScaraIKPlanner(Node):
         q2 = (-math.pi + g2) * self.ARM
         
         # Нормализация углов (опционально)
-        q1 = self.normalize_angle(q1)
+        q1 = self.normalize_angle(q1) 
         q2 = self.normalize_angle(q2)
 
         # Расчёт угла для схвата
@@ -104,7 +104,7 @@ class ScaraIKPlanner(Node):
         """
         # Здесь можно добавить преобразование в градусы, если требуется драйверу
         # Но пока оставим в радианах, как в отдельных топиках
-        cmd_str = f"$6;{math.degrees(q1):.0f};{math.degrees(q2):.0f};{math.degrees(q3):.0f};#"
+        cmd_str = f"$6;{-math.degrees(q1):.0f};{-math.degrees(q2):.0f};{math.degrees(q3):.0f};#"
         msg = String()
         msg.data = cmd_str
         self.string_pub.publish(msg)

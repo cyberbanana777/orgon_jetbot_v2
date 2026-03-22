@@ -16,9 +16,9 @@ class JointStateBridge(Node):
         self.q4 = 0.0
         self.q5 = 0.0
 
-        self.create_subscription(Float32, '/angle1', self.cb1, 10)
-        self.create_subscription(Float32, '/angle2', self.cb2, 10)
-        self.create_subscription(Float32, '/angle3', self.cb3, 10)
+        self.create_subscription(Float32, '/hand_of_god/angle1', self.cb1, 10)
+        self.create_subscription(Float32, '/hand_of_god/angle2', self.cb2, 10)
+        self.create_subscription(Float32, '/hand_of_god/angle3', self.cb3, 10)
 
         self.pub = self.create_publisher(JointState, '/joint_states', 10)
 
