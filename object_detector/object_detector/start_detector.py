@@ -15,8 +15,8 @@ class ArucoStartNode(Node):
         self.get_logger().info('Aruco start node initialized')
 
     def aruco_callback(self, msg: ArucoMarkers):
-        # Проверяем, есть ли маркер с id=6
-        marker_present = any(marker.id == 6 for marker in msg.markers)
+        # Проверяем, есть ли маркер с id=8
+        marker_present = any(marker.id == 8 for marker in msg.markers)
         # Создаем сообщение Bool
         pub_msg = Bool()
         pub_msg.data = marker_present
