@@ -20,13 +20,13 @@ slam_toolbox:
     # Параметры построения карты
     resolution: 0.02               # Разрешение карты: размер клетки в метрах
     max_laser_range: 12.0           # Максимальное расстояние луча лидара (должно совпадать с датчиком)
-    min_laser_range: 0.1
+    min_laser_range: 0.05
     minimum_time_interval: 0.01    # Минимальное время между обработкой сканов
     transform_publish_period: 0.01 # Как часто публиковать transform map -> odom
 
     # Условия добавления новых узлов (ключевых фреймов)
-    minimum_travel_distance: 0.01          # Минимальное смещение робота (м), чтобы добавить узел
-    minimum_travel_heading: 0.02           # Минимальный поворот (рад), чтобы добавить узел
+    minimum_travel_distance: 0.05          # Минимальное смещение робота (м), чтобы добавить узел
+    minimum_travel_heading: 0.05           # Минимальный поворот (рад), чтобы добавить узел
     temporal_update_distance: 0.0         # [Отключено] автообновление по пройденному расстоянию
     temporal_update_angle: 0.0            # [Отключено] автообновление по углу
 
@@ -36,7 +36,7 @@ slam_toolbox:
     optimizer_iterations: 10              # Кол-во итераций оптимизатора за проход
 
     # Замыкание петель (Loop Closure)
-    do_loop_closing: true                         # Включить замыкание петель
+    do_loop_closing: false                         # Включить замыкание петель
     loop_closure_enabled: true                    # Разрешить искать петли
     loop_closure_frequency: 1.0                   # Частота попыток замыкания петель (Гц)
     loop_closure_threshold: 4.0                   # Порог оценки совпадения сканов для петли
