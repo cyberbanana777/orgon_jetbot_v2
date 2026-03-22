@@ -76,7 +76,7 @@ class TwistToCommand(Node):
             self.aruco_sub = None
 
             # Запускаем таймер на 90 секунд
-            self.timer = self.create_timer(90.0, self.timer_callback)
+            self.timer = self.create_timer(89.5, self.timer_callback) # не 90, что бы наверняка не выйти за пределы
 
     def timer_callback(self):
         """Срабатывает после 90 секунд."""
