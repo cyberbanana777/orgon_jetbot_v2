@@ -1,5 +1,6 @@
 from setuptools import find_packages, setup
-
+import os
+from glob import glob
 package_name = 'object_detector'
 
 setup(
@@ -10,6 +11,14 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (
+            os.path.join("share", package_name, "launch"),
+            glob("launch/*.launch.py"),
+        ),
+        (
+            os.path.join("share", package_name, "rqt_config"),
+            glob("rqt_config/*.perspective"),
+        ),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -26,6 +35,7 @@ setup(
         'console_scripts': [
             'coordinates_object = object_detector.coordinates_object:main',
             'object_detector = object_detector.object_detector:main',
+            'start_detector = object_detector.start_detector:main',
         ],
     },
 )
